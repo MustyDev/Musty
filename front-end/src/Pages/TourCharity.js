@@ -22,6 +22,9 @@ export default function TourCharity() {
       justify-content : center ;
       .input{
          margin-top : 50px;
+         width : 80%;
+         margin-left : 10%;
+         
       }
       .FormInput{
          margin-bottom : 25px;
