@@ -9,12 +9,19 @@ import TourCharity from "./Pages/TourCharity";
 import About from "./Pages/About";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
+import Home from "./Pages/Home"
+import Nav from "./Components/Navbar"
+import Footer from "./Components/Footbar"
 
 function App() {
   return (
     <div className="App">
       <Router>
+      <Nav />
         <Switch>
+          <Route exac path="/">
+            <Home />
+          </Route>
           <Route exac path="/form-tourcharity">
             <TourCharity />
           </Route>
@@ -32,7 +39,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-
+<Footer />
       {/* <TourCharity /> */}
     </div>
   );
