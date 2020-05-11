@@ -1,0 +1,32 @@
+.jumboAdmin{
+    background-image: url("../../Images/cover.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.jumboContAdmin{
+    text-align: center;
+    font-size: 20px;
+}
+.darkenImage {
+//   display: inline-block;
+  color: white;
+  position: relative;
+}
+
+.darkenImage:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all .2s linear;
+}
+
+.darkenImage h1,
+.darkenImage p {
+  position: relative;
+}
