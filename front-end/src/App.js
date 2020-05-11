@@ -1,14 +1,14 @@
 import React from "react";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
-//Pages
-import Admin from "./Pages/Admin";
-import TourCharity from "./Pages/TourCharity";
 import About from "./Pages/About";
-import Register from "./Pages/Register";
+import Admin from "./Pages/Admin";
 import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import TourCharity from "./Pages/TourCharity";
 import Home from "./Pages/Home"
 import Nav from "./Components/Navbar"
 import Footer from "./Components/Footbar"

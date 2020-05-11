@@ -1,8 +1,15 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Jumbotron, Table, Container, Badge } from 'react-bootstrap'
 import '../Components/Admin/admin.scss'
+import { connect } from 'react-redux'
+import { getDataDana } from '../Action/AdminAction'
 
-function Admin() {
+function Admin(props) {
+    const [dataDana, setDataDana] = useState('')
+
+    useEffect(() => {
+        props.getDataDana()
+    },[])
     return (
         <div>
             <Jumbotron fluid className="jumboAdmin darkenImage">
@@ -25,13 +32,19 @@ function Admin() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Afgan</td>
-                            <td>Konser Amal</td>
-                            <td>Untuk Menambah Hasil Amal dari konsernya</td>
-                            <td><Badge variant="warning">Waiting</Badge></td>
-                        </tr>
+                        {props.data.map((item, index) => 
+                            item.status == "waiting" || item.status == "Waiting" ?(
+                                <p>{props.error}</p>
+                            ):(
+                                <tr>
+                                    <td>{index}</td>
+                                    <td>{item.nama}</td>
+                                    <td>{item.judul}</td>
+                                    <td>{item.tujuan}</td>
+                                    <td>{item.status}</td>
+                                </tr>
+                            )
+                        )}
                         </tbody>
                 </Table>
             </Container>
@@ -39,4 +52,11 @@ function Admin() {
     )
 }
 
-export default Admin
+const mapStateToProps = (props) => {
+    return{
+        data:props.getDana.dana
+    }
+}
+
+const mapDispatchToProps = {getDataDana}
+export default connect(mapStateToProps, mapDispatchToProps)(Admin)
