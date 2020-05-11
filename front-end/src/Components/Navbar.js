@@ -44,11 +44,16 @@ const Nav = () => {
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text>
           <GrNotes />
-          <Link to="/" className="text">Start a Projet</Link>
+          <Link to="/" className="text">
+            Start a Projet
+          </Link>
           <FiLogIn />
-          <Link to="/" className="text">Login</Link>
+          <Link to="/login" className="text">
+            Login
+          </Link>
           <text>/</text>
-          <Link to="/" className="text">Register
+          <Link to="/register" className="text">
+            Register
           </Link>
         </Navbar.Text>
       </Navbar.Collapse>

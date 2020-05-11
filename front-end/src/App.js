@@ -19,10 +19,10 @@ function App() {
       <Router>
       <Nav />
         <Switch>
-          <Route exac path="/">
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route exac path="/form-tourcharity">
+          <Route path="/form-tourcharity">
             <TourCharity />
           </Route>
           <Route path="/admin">
