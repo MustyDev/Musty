@@ -8,6 +8,7 @@ import Admin from "./Pages/Admin";
 import TourCharity from "./Pages/TourCharity";
 import About from "./Pages/About";
 import Register from "./Pages/Register";
+import Login from "./Pages/Login";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
         </Switch>
       </Router>
