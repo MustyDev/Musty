@@ -1,12 +1,16 @@
-import React from 'react'
-import Carousel from '../Components/Carousel'
+import React from "react";
+import Carousel from "../Components/Carousel";
+import Category from "../Components/Category";
+import Container from "../Components/Container";
 
 function Home() {
-    return (
-        <div>
-            <Carousel />
-        </div>
-    )
+  return (
+    <div>
+      <Carousel />
+      <Container />
+      <Category />
+    </div>
+  );
 }
 
-export default Home
+export default Home;

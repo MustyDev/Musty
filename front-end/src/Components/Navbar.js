@@ -44,8 +44,8 @@ const Nav = () => {
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text>
           <GrNotes />
-          <Link to="/" className="text">
-            Start a Projet
+          <Link to="/" className="text-donasi">
+            Mulai Donasi
           </Link>
           <FiLogIn />
           <Link to="/login" className="text">
