@@ -7,7 +7,7 @@ function Cntnr() {
       <Container className="container-category">
         <h1 className="text-container">Pilih berdasarkan kategori</h1>
         <h5 className="deskripsi-container">
-          Mulai Donasi untuk memabantu Musisi Idola Kamu.
+          Mulai Donasi untuk Musisi Idola Kamu.
         </h5>
       </Container>
     </Jumbotron>

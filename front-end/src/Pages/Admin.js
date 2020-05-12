@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
+
 import { Jumbotron, Table, Container, Badge } from "react-bootstrap";
-import "../Components/Admin/admin.scss";
+
 import { connect } from "react-redux";
+
 import { getDataDana } from "../Action/AdminAction";
+import "../Components/Admin/admin.scss";
 
 function Admin(props) {
   const [dataDana, setDataDana] = useState("");
-
   useEffect(() => {
     props.getDataDana();
   }, []);
@@ -30,19 +32,16 @@ function Admin(props) {
             </tr>
           </thead>
           <tbody>
-            {props.data.map((item, index) =>
-              item.status == "waiting" || item.status == "Waiting" ? (
-                <p>{props.error}</p>
-              ) : (
-                <tr>
-                  <td>{index}</td>
-                  <td>{item.nama}</td>
-                  <td>{item.judul}</td>
-                  <td>{item.tujuan}</td>
-                  <td>{item.status}</td>
-                </tr>
-              )
-            )}
+            {props.data.map((item, index) => {
+                if(item.status == "waiting")
+                    return <tr>
+                                <td>{index + 1}</td>
+                                <td>{item.nama}</td>
+                                <td>{item.judul}</td>
+                                <td>{item.tujuan}</td>
+                                <td><Badge variant="warning">{item.status}</Badge></td>
+                            </tr>
+            })}
           </tbody>
         </Table>
       </Container>
