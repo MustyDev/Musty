@@ -40,7 +40,7 @@ footer {
   margin-bottom: 10px;
 }
 
-.card {
+.card-category {
   height: 200px;
   width: 200px;
   box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
@@ -48,15 +48,15 @@ footer {
   text-align: center;
 }
 
-.card :hover {
+.card-category :hover {
   background-color: #2ecc71;
   animation: f;
 }
-.card :hover .icon {
+.card-category :hover .icon {
   color: white;
 }
 
-.card :hover .text {
+.card-category :hover .text {
   color: white;
   text-decoration: none;
 }

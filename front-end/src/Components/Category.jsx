@@ -8,7 +8,7 @@ function Category() {
   return (
     <div>
       <Row className="row-category">
-        <Card className="card">
+        <Card className="card-category">
           <Link to="/" style={{ textDecoration: "none" }}>
             <Card.Body>
               <center>
@@ -19,7 +19,7 @@ function Category() {
           </Link>
         </Card>
 
-        <Card className="card">
+        <Card className="card-category">
           <Link to="/" style={{ textDecoration: "none" }}>
             <Card.Body>
               <center>
@@ -30,7 +30,7 @@ function Category() {
           </Link>
         </Card>
 
-        <Card className="card">
+        <Card className="card-category">
           <Link to="/" style={{ textDecoration: "none" }}>
             <Card.Body>
               <center>
