@@ -1,5 +1,5 @@
-.jumbotronLogin {
-  background-image: url(../Images/DWP.jpeg);
+.jumbotronRegister {
+  background-image: url(../../Images/DWP.jpeg);
   height: 275px;
   background-position: center;
   display: block;
@@ -12,7 +12,8 @@ h1 {
   color: #fff;
 }
 
-.containerLogin {
+.containerRegister {
   padding-left: 200px;
   padding-right: 200px;
 }
+/*# sourceMappingURL=Register.css.map */

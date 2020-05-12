@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Jumbotron, Form, Button } from "react-bootstrap";
 
-import "../Assets/Login.scss";
+import "../Assets/Login/Login.scss";
 
 const Login = () => {
   return (
