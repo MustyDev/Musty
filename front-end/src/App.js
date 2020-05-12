@@ -13,7 +13,8 @@ import Home from "./Pages/Home";
 import Nav from "./Components/Navbar";
 import Footer from "./Components/Footbar";
 import MenuBar from "./Components/Menubar";
-import DetailsCharity from "./Pages/DetailsCharity"
+import DetailsCharity from "./Pages/DetailsCharity";
+import Donate from "./Pages/Donate";
 
 function App() {
   return (
@@ -43,11 +44,12 @@ function App() {
           <Route path="/details-charity">
             <DetailsCharity />
           </Route>
+          <Route path="/donate">
+            <Donate />
+          </Route>
         </Switch>
-         
       </Router>
       <Footer />
-   
     </div>
   );
 }
