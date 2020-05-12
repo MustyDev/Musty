@@ -90,7 +90,7 @@ const Register = (props) => {
       </div>
       <div>
         <Container className="containerRegister">
-          <Form className="form">
+          <Form className="shadow p-3 mb-5 bg-white rounded">
             <Form.Group>
               <Form.Label>Name</Form.Label>
               <Form.Control
