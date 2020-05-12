@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import { Formik } from 'formik'
 import { Jumbotron, Button, Form, ProgressBar } from 'react-bootstrap'
 
 export default function DetailsCharity() {
@@ -24,7 +23,7 @@ export default function DetailsCharity() {
    #cardItem{
       width: 100% !important;
       height: 100% !important;
-      margin: 10px 0px 10px 0px;
+      
    }
    #cardItem img {
       margin: 0px 0 0 0px;
@@ -41,7 +40,7 @@ export default function DetailsCharity() {
       justify-content : flex-start;
    }
    .card-title{
-      margin-top : -50px;
+      margin-top : 0px;
       display : flex ;
       justify-content : flex-start;
       color : black;
@@ -69,6 +68,7 @@ export default function DetailsCharity() {
       margin-left : 22%;
       h6{
          margin-top : -20px;
+         margin-left : 15px;
       }
    }
 
@@ -84,7 +84,7 @@ export default function DetailsCharity() {
          </StyleDiv>
          <StyleCard>
             <div className="container col-md-10 animated zoomIn" id="containerCard">
-               <div id="cardItem" className="card" style={{ maxWidth: "10000px", maxHeight: "800px" }}>
+               <div id="cardItem" className="card" style={{ maxWidth: "1000px", maxHeight: "800px" }}>
                   <div className="row no-gutters">
                      <div className="col-md-4">
                         <img src="https://www.koranmadura.com/wp-content/uploads/2019/10/sheila-on-7_20180702_192203-730x477.jpg" className="card-img" alt="gambar" />

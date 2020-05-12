@@ -21,7 +21,7 @@ function App() {
       <Router>
         <Nav />
         <MenuBar />
-        {/* <Switch>
+        <Switch>
           <Route exact path="/">
             <Home />
           </Route>
@@ -40,8 +40,11 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-        </Switch> */}
-           <DetailsCharity />
+          <Route path="/details-charity">
+            <DetailsCharity />
+          </Route>
+        </Switch>
+         
       </Router>
       <Footer />
    
