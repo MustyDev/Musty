@@ -33,7 +33,7 @@ function Admin(props) {
                     </thead>
                     <tbody>
                         {props.data.map((item, index) => 
-                            item.status == "waiting" || item.status == "Waiting" ?(
+                            item.status == "waiting" ?(
                                 <p>{props.error}</p>
                             ):(
                                 <tr>
@@ -54,7 +54,7 @@ function Admin(props) {
 
 const mapStateToProps = (props) => {
     return{
-        data:props.getDana.dana
+        data:props.dana
     }
 }
 
