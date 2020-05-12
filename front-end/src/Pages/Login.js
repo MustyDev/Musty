@@ -15,11 +15,21 @@ const Login = () => {
           <Form>
             <Form.Group>
               <Form.Label>Email Address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" required />
+              <Form.Control
+                type="email"
+                name="email"
+                placeholder="Enter email"
+                required
+              />
             </Form.Group>
             <Form.Group>
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" required />
+              <Form.Control
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
             </Form.Group>
             <Button variant="primary" type="submit">
               Submit
