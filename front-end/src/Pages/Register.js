@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Container, Jumbotron, Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import "../Assets/Register.scss";
+import "../Assets/Register/Register.scss";
 
 import { withRouter } from "react-router-dom";
 
