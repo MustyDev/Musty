@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer class="footer">
       <div className="text-footer">
-        <span>©️ Musty - Music Charity</span>
+        <span>&copy; Musty - Music Charity</span>
       </div>
     </footer>
   );

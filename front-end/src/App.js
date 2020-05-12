@@ -9,15 +9,17 @@ import Admin from "./Pages/Admin";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import TourCharity from "./Pages/TourCharity";
-import Home from "./Pages/Home"
-import Nav from "./Components/Navbar"
-import Footer from "./Components/Footbar"
+import Home from "./Pages/Home";
+import Nav from "./Components/Navbar";
+import Footer from "./Components/Footbar";
+import MenuBar from "./Components/Menubar";
 
 function App() {
   return (
     <div className="App">
       <Router>
-      <Nav />
+        <Nav />
+        <MenuBar />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -39,7 +41,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-<Footer />
+      <Footer />
       {/* <TourCharity /> */}
     </div>
   );

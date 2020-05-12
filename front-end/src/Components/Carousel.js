@@ -8,6 +8,14 @@ const Crsl = () => {
       <Carousel>
         <Carousel.Item>
           <img className="d-block w-100" src={Header} alt="Header" />
+          <Carousel.Caption className="caption-carousel">
+            <h1 className="title-carousel">
+              Ayo Donasi Untuk Musisi Idola Kamu!
+            </h1>
+            <p className="deskripsi-carousel">
+              Bantu mereka untuk tetap berkarya.
+            </p>
+          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>
