@@ -24,58 +24,9 @@ const Register = (props) => {
     });
   };
 
-  // // Untuk menyimpan State Nama
-  // const [name, setName] = useState("");
-  // console.log("name", name);
-
-  // // Handle Change Nama
-  // const handleChangeName = (event) => {
-  //   setName(event.target.value);
-  // };
-
-  // // Untuk menyimpan State Email
-  // const [email, setEmail] = useState("");
-  // console.log("email", email);
-
-  // // Handle Change Email
-  // const handleChangeEmail = (event) => {
-  //   setEmail(event.target.value);
-  // };
-
-  // // Untuk menyimpan State No HP
-  // const [no, setNo] = useState("");
-  // console.log("no", no);
-
-  // // Handle Change No HP
-  // const handleChangeNo = (event) => {
-  //   setNo(event.target.value);
-  // };
-
-  // // Untuk menyimpan State Password
-  // const [password, setPassword] = useState("");
-  // console.log("password", password);
-
-  // // Handle Change Password
-  // const handleChangePassword = (event) => {
-  //   setPassword(event.target.value);
-  // };
-
   // Handle Add Register pada Button Register
   const handleAddUser = (event) => {
     event.preventDefault();
-    // const newUser = [
-    //   ...user,
-    //   { text: name },
-    //   { text: email },
-    //   { text: no },
-    //   { text: password },
-    // ];
-    // setUser(newUser);
-    // setName("");
-    // setEmail("");
-    // setNo("");
-    // setPassword("");
-    // const Users = { name: name, email: email, no: no, password: password };
     localStorage.setItem("user", JSON.stringify(user));
     props.history.push("/login");
     if (user) return alert("Register berhasil!");
@@ -84,8 +35,10 @@ const Register = (props) => {
   return (
     <div>
       <div>
-        <Jumbotron className="jumbotronRegister">
-          <h1>Register Account</h1>
+        <Jumbotron className="jumbotronRegister darkenImage">
+          <Container>
+            <h1>Register Account</h1>
+          </Container>
         </Jumbotron>
       </div>
       <div>
@@ -136,7 +89,7 @@ const Register = (props) => {
               />
             </Form.Group>
             <Button
-              className="px-4"
+              className="buttonRegister px-4"
               variant="primary"
               onClick={handleAddUser}
               type="submit"

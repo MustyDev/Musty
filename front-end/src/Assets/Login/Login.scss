@@ -1,6 +1,6 @@
 .jumbotronLogin {
-  background-image: url(../../Images/DWP.jpeg);
-  height: 275px;
+  background-image: url("../../Images/concert2.jpg");
+  background-size: cover;
   background-position: center;
   display: block;
 }
@@ -15,4 +15,26 @@ h1 {
 .containerLogin {
   padding-left: 200px;
   padding-right: 200px;
+}
+
+.darkenImage {
+  // display: inline-block;
+  color: white;
+  position: relative;
+}
+
+.darkenImage:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.2s linear;
+}
+
+.darkenImage h1 {
+  position: relative;
 }

@@ -8,7 +8,7 @@ const Login = () => {
   return (
     <div>
       <div>
-        <Jumbotron className="jumbotronLogin">
+        <Jumbotron className="jumbotronLogin darkenImage">
           <h1>Login</h1>
         </Jumbotron>
       </div>
@@ -33,7 +33,7 @@ const Login = () => {
                 required
               />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button className="px-4" variant="primary" type="submit">
               Login
             </Button>
           </Form>

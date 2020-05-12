@@ -1,13 +1,12 @@
 .jumbotronRegister {
-  background-image: url(../../Images/DWP.jpeg);
-  height: 275px;
+  background-image: url("../../Images/concert4.jpg");
+  background-size: cover;
   background-position: center;
   display: block;
 }
 
 h1 {
   text-align: center;
-  padding-top: 50px;
   font-size: 50px;
   color: #fff;
 }
@@ -15,5 +14,31 @@ h1 {
 .containerRegister {
   padding-left: 200px;
   padding-right: 200px;
+}
+
+.darkenImage {
+  color: white;
+  position: relative;
+}
+
+.darkenImage:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.darkenImage h1 {
+  position: relative;
+}
+
+.buttonRegister {
+  text-align: right;
 }
 /*# sourceMappingURL=Register.css.map */
