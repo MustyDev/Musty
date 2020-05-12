@@ -2,17 +2,19 @@ import React from "react";
 
 import { Container, Jumbotron, Form, Button } from "react-bootstrap";
 
+import "../Assets/Login.scss";
+
 const Login = () => {
   return (
     <div>
       <div>
-        <Jumbotron>
+        <Jumbotron className="jumbotronLogin">
           <h1>Login</h1>
         </Jumbotron>
       </div>
       <div>
-        <Container>
-          <Form>
+        <Container className="containerLogin">
+          <Form className="shadow p-3 mb-5 bg-white rounded">
             <Form.Group>
               <Form.Label>Email Address</Form.Label>
               <Form.Control
@@ -32,7 +34,7 @@ const Login = () => {
               />
             </Form.Group>
             <Button variant="primary" type="submit">
-              Submit
+              Login
             </Button>
           </Form>
         </Container>
