@@ -8,29 +8,32 @@ import "../Assets/Register/Register.scss";
 import { withRouter } from "react-router-dom";
 
 const Register = (props) => {
-  console.log("props", props);
-  // Untuk menyimpan State Register
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    no: "",
-    password: "",
-  });
+  // console.log("props", props);
 
-  const handleChange = (event) => {
-    setUser({
-      ...user,
-      [event.target.name]: event.target.value,
-    });
-  };
+  // // Untuk menyimpan State User
+  // const [user, setUser] = useState({
+  //   name: "",
+  //   email: "",
+  //   no: "",
+  //   password: "",
+  // });
 
-  // Handle Add Register pada Button Register
-  const handleAddUser = (event) => {
-    event.preventDefault();
-    localStorage.setItem("user", JSON.stringify(user));
-    props.history.push("/login");
-    if (user) return alert("Register berhasil!");
-  };
+  // // Handle Change pada Input
+  // const handleChange = (event) => {
+  //   setUser({
+  //     ...user,
+  //     [event.target.name]: event.target.value,
+  //   });
+  // };
+
+  // // Handle Add Register pada Button Register
+  // const handleAddUser = (event) => {
+  //   event.preventDefault();
+  //   localStorage.setItem("user", JSON.stringify(user));
+  //   props.history.push("/login");
+  //   if (user) return alert("Register berhasil!");
+  //   if (!user) return alert("Harap diisi");
+  // };
 
   return (
     <div>
@@ -49,8 +52,8 @@ const Register = (props) => {
               <Form.Control
                 type="text"
                 name="name"
-                value={user.name}
-                onChange={handleChange}
+                // value={user.name}
+                // onChange={handleChange}
                 placeholder="Enter your Name"
                 required
               />
@@ -60,8 +63,8 @@ const Register = (props) => {
               <Form.Control
                 type="email"
                 name="email"
-                value={user.email}
-                onChange={handleChange}
+                // value={user.email}
+                // onChange={handleChange}
                 placeholder="Enter email"
                 required
               />
@@ -71,8 +74,8 @@ const Register = (props) => {
               <Form.Control
                 type="number"
                 name="no"
-                value={user.no}
-                onChange={handleChange}
+                // value={user.no}
+                // onChange={handleChange}
                 placeholder="Enter your Phone Number"
                 required
               />
@@ -82,8 +85,8 @@ const Register = (props) => {
               <Form.Control
                 type="password"
                 name="password"
-                value={user.password}
-                onChange={handleChange}
+                // value={user.password}
+                // onChange={handleChange}
                 placeholder="Password"
                 required
               />
@@ -91,7 +94,7 @@ const Register = (props) => {
             <Button
               className="buttonRegister px-4"
               variant="primary"
-              onClick={handleAddUser}
+              // onClick={handleAddUser}
               type="submit"
             >
               Register

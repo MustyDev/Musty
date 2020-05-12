@@ -9,7 +9,9 @@ const Login = () => {
     <div>
       <div>
         <Jumbotron className="jumbotronLogin darkenImage">
-          <h1>Login</h1>
+          <Container>
+            <h1>Login</h1>
+          </Container>
         </Jumbotron>
       </div>
       <div>

@@ -7,6 +7,7 @@
 
 h1 {
   text-align: center;
+  padding-top: 30px;
   font-size: 50px;
   color: #fff;
 }
@@ -39,6 +40,9 @@ h1 {
 }
 
 .buttonRegister {
-  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: flex-end;
 }
 /*# sourceMappingURL=Register.css.map */
