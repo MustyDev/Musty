@@ -13,6 +13,7 @@ import Home from "./Pages/Home";
 import Nav from "./Components/Navbar";
 import Footer from "./Components/Footbar";
 import MenuBar from "./Components/Menubar";
+import DetailsCharity from "./Pages/DetailsCharity"
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <Router>
         <Nav />
         <MenuBar />
-        <Switch>
+        {/* <Switch>
           <Route exact path="/">
             <Home />
           </Route>
@@ -39,10 +40,11 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-        </Switch>
+        </Switch> */}
+           <DetailsCharity />
       </Router>
       <Footer />
-      {/* <TourCharity /> */}
+   
     </div>
   );
 }
