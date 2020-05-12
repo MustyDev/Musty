@@ -27,9 +27,9 @@ export default function DetailsCharity() {
       margin: 10px 0px 10px 0px;
    }
    #cardItem img {
-      margin: 10px 0 10px 0px;
-      height: 90%;
-      width : 95% ;
+      margin: 0px 0 0 0px;
+      height: 100%;
+      width : 100% ;
    }
    .status{
       display : flex ;
@@ -39,6 +39,12 @@ export default function DetailsCharity() {
       margin-top : 15px;
       display : flex ;
       justify-content : flex-start;
+   }
+   .card-title{
+      margin-top : -50px;
+      display : flex ;
+      justify-content : flex-start;
+      color : black;
    }
    .card-persen{
       margin-top : 15px;
@@ -67,6 +73,8 @@ export default function DetailsCharity() {
    }
 
    `;
+
+
    return (
       <Fragment>
          <StyleDiv>
