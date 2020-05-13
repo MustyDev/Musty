@@ -74,7 +74,7 @@ footer {
   margin-top: 20px;
 }
 
-.text-container {
+.text-title {
   font-weight: bolder;
   color: black;
 }
@@ -111,6 +111,32 @@ footer {
   font-size: 30px;
 }
 
-.deskripsi-container {
+.title-description {
   color: #777777;
+  text-align: center;
 }
+
+.card-deck {
+margin-top: 20px;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+.button-charity {
+  text-align: center;
+  float:center;
+}
+
+.profile-pic {
+  width: 40%;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.total-project {
+ background-color: brown;
+   margin-top: 30px;
+ 
+ }
