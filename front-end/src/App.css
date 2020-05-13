@@ -1,3 +1,11 @@
+/* Logo color {
+  #1f98e5
+  #dc23d4
+} */
+.buttonSearch {
+  background-color: #dc23d4;
+  border-color: #dc23d4;
+}
 .icon-sosmed {
   color: black;
   margin: 5px;
@@ -36,7 +44,7 @@ footer {
 .icon {
   height: 100px;
   width: 100px;
-  color: #2ecc71;
+  color: #1f98e5;
   margin-bottom: 10px;
 }
 
@@ -49,7 +57,7 @@ footer {
 }
 
 .card-category :hover {
-  background-color: #2ecc71;
+  background-color: #1f98e5;
   animation: f;
 }
 .card-category :hover .icon {
@@ -76,7 +84,7 @@ footer {
 
 .text-container {
   font-weight: bolder;
-  color: black;
+  color: #1f98e5;
 }
 
 .row-category {

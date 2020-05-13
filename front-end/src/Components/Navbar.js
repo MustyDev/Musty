@@ -11,53 +11,55 @@ import "../App.css";
 
 const Nav = () => {
   return (
-    <Navbar className="navbarheader">
-      <a
-        href="https://www.instagram.com/"
-        className="icon-sosmed"
-        target="_blank"
-      >
-        <FiInstagram />
-      </a>
-      <a
-        href="https://www.facebook.com/"
-        className="icon-sosmed"
-        target="_blank"
-      >
-        <FaFacebookF />
-      </a>
-      <a
-        href="https://www.twitter.com/"
-        className="icon-sosmed"
-        target="_blank"
-      >
-        <FaTwitter />
-      </a>
-      <a
-        href="https://github.com/MustyDev"
-        className="icon-sosmed"
-        target="_blank"
-      >
-        <FaGithub />
-      </a>
+    <>
+      <Navbar className="navbarheader">
+        <a
+          href="https://www.instagram.com/"
+          className="icon-sosmed"
+          target="_blank"
+        >
+          <FiInstagram />
+        </a>
+        <a
+          href="https://www.facebook.com/"
+          className="icon-sosmed"
+          target="_blank"
+        >
+          <FaFacebookF />
+        </a>
+        <a
+          href="https://www.twitter.com/"
+          className="icon-sosmed"
+          target="_blank"
+        >
+          <FaTwitter />
+        </a>
+        <a
+          href="https://github.com/MustyDev"
+          className="icon-sosmed"
+          target="_blank"
+        >
+          <FaGithub />
+        </a>
 
-      <Navbar.Collapse className="justify-content-end">
-        <Navbar.Text>
-          <GrNotes />
-          <Link to="/donate" className="text-donasi">
-            Mulai Donasi
-          </Link>
-          <FiLogIn />
-          <Link to="/login" className="text">
-            Login
-          </Link>
-          <text>/</text>
-          <Link to="/register" className="text">
-            Register
-          </Link>
-        </Navbar.Text>
-      </Navbar.Collapse>
-    </Navbar>
+        <Navbar.Collapse className="justify-content-end">
+          <Navbar.Text>
+            <GrNotes />
+            <Link to="/donate" className="text-donasi">
+              Mulai Donasi
+            </Link>
+            <FiLogIn />
+            <Link to="/login" className="text">
+              Login
+            </Link>
+            <text>/</text>
+            <Link to="/register" className="text">
+              Register
+            </Link>
+          </Navbar.Text>
+        </Navbar.Collapse>
+      </Navbar>
+    </>
   );
 };
 export default Nav;

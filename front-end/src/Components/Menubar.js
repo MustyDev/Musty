@@ -88,7 +88,9 @@ function MenuBar() {
                 placeholder="Search"
                 className="mr-sm-2"
               />
-              <Button variant="dark">Search</Button>
+              <Button className="buttonSearch" variant="dark">
+                Search
+              </Button>
             </Form>
           </Nav>
         </Navbar.Collapse>
