@@ -19,6 +19,7 @@ export default function DetailsCharity() {
    #containerCard{
       display : flex;
       justify-content : flex-start;
+      
    }
    #cardItem{
       width: 100% !important;
@@ -113,7 +114,6 @@ export default function DetailsCharity() {
                   <p>Add-in your full project description here.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate sed mauris vitae pellentesque. Nunc ut ullamcorper libero. Aenean fringilla mauris quis risus laoreet interdum. Quisque imperdiet orci in metus aliquam egestas. Fusce elit libero, imperdiet nec orci quis, convallis hendrerit nisl. Cras auctor nec purus at placerat. Quisque consectetur, lectus in ullamcorper tempus, dolor arcu suscipit elit, id laoreet tortor justo nec arcu. Nam eu dictum ipsum. Morbi in mi eu urna placerat finibus a vel neque.</p>
                   <p>nteger feugiat est in tincidunt congue. Nam eget accumsan ligula. Nunc auctor ligula a quam fermentum, non iaculis diam suscipit. Aliquam lacinia lorem vel suscipit pulvinar. Etiam condimentum nunc non ultricies hendrerit. Sed nec blandit libero, ut gravida quam. Nam tortor est, faucibus at dolor id, blandit venenatis leo. Praesent euismod tempus libero et accumsan. Nunc ultrices sit amet urna sed euismod. Pellentesque finibus ipsum non mi sodales, vel ullamcorper ipsum pharetra. Praesent nec pharetra neque, elementum tempus purus. Sed fringilla, libero blandit elementum viverra, nibh urna faucibus nisl, in placerat ex dolor eu nulla.Duis ornare massa est, condimentum convallis lacus feugiat a. Cras elementum nec augue id condimentum. Morbi iaculis urna sit amet sapien egestas, sit amet condimentum tellus cursus. Quisque ipsum metus, hendrerit vitae dolor ac, blandit imperdiet ligula. Donec vestibulum sem justo, pulvinar laoreet tellus cursus ut. Quisque dui diam, volutpat at mauris sit amet, finibus suscipit ipsum. Donec commodo tincidunt posuere. Donec eleifend consectetur lorem, eu sodales dolor pharetra vitae.</p>
                </div>
-
                <div className="container col-md-3" id="daftar-donatur">
                   <h3>Donatur</h3>
                   <div className="card" id="card-donatur" style={{width:"50%", height : "40%"}}>
@@ -125,9 +125,7 @@ export default function DetailsCharity() {
                   </div>
                </div>
             </div>
-
          </StyleCard>
-
       </Fragment>
    )
 

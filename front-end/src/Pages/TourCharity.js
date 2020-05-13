@@ -146,6 +146,7 @@ export default function TourCharity() {
                                  onChange={handleChange}
                                  onBlur={handleBlur}
                                  value={values.kategori}>
+                                 <option>Pilih Category</option>
                                  <option>Konser</option>
                                  <option>Alat Musik</option>
                                  <option>Album</option>
@@ -327,7 +328,7 @@ export default function TourCharity() {
                               </span>
                            </Form.Group>
                            <div className="button-submit">
-                              <Button variant="dark" type="submit" disabled={isSubmitting}>Galang Dana</Button>
+                              <Button variant="primary" type="submit" disabled={isSubmitting}>Galang Dana</Button>
                            </div>
                         </Form>
                      );
