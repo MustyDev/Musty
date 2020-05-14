@@ -67,7 +67,6 @@ footer {
 
 .card-category :hover {
   background-color: #1f98e5;
-  animation: f;
 }
 .card-category :hover .icon {
   color: white;
@@ -175,4 +174,17 @@ footer {
 .total-project {
   background-color: #1f98e5;
   margin-top: 30px;
+}
+
+.card-galangdana {
+  box-shadow: 8px 8px 14px 14px rgba(5, 5, 5, 0.2);
+  border-radius: 30px;
+}
+
+.card-galangdana img {
+  border-radius: 30px;
+}
+.button-charity {
+  background-color: #dc23d4;
+  border-color: #dc23d4;
 }
