@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { Jumbotron, Table, Container, Badge } from "react-bootstrap";
+import { Jumbotron, Table, Container, Badge, Button } from "react-bootstrap";
 
 import { connect } from "react-redux";
 
@@ -8,10 +8,24 @@ import { getDataDana } from "../Action/AdminAction";
 import "../Components/Admin/admin.scss";
 
 function Admin(props) {
-  const [dataDana, setDataDana] = useState("");
+  const [editData, setEditData] = useState("");
+
   useEffect(() => {
     props.getDataDana();
   }, []);
+
+  const handleClickStatus = (e) => {
+      e.preventDefault()
+
+      let newData = {
+        id: props.editData.id,
+        status: "approve"
+      }
+      // props.putDataDana(newData)
+
+      console.log(newData)
+  }
+
   return (
     <div>
       <Jumbotron fluid className="jumboAdmin darkenImage">
@@ -29,17 +43,24 @@ function Admin(props) {
               <th>Judul Penggalang</th>
               <th>Tujuan Penggalang</th>
               <th>Status</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
             {props.data.map((item, index) => {
                 if(item.status == "waiting")
-                    return <tr>
+                    return <tr key={item.id}>
                                 <td>{index + 1}</td>
                                 <td>{item.nama}</td>
                                 <td>{item.judul}</td>
                                 <td>{item.tujuan}</td>
                                 <td><Badge variant="warning">{item.status}</Badge></td>
+                                <td><Button variant="primary" size="sm" 
+                                        onClick={handleClickStatus}
+                                        value={"Approve"}
+                                      >
+                                      Approve
+                                    </Button>{' '}</td>
                             </tr>
             })}
           </tbody>
