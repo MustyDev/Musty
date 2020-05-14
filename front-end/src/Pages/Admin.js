@@ -4,7 +4,11 @@ import { Jumbotron, Table, Container, Badge, Button } from "react-bootstrap";
 
 import { connect } from "react-redux";
 
+<<<<<<< HEAD
 import { getDataDana, putDataEdit } from "../Action/AdminAction";
+=======
+import { getDataDana, getDanaById } from "../Action/AdminAction";
+>>>>>>> cbd07abd30ef46daef37020ed1a5d37f1d127159
 import "../Components/Admin/admin.scss";
 
 function Admin(props) {
@@ -15,6 +19,7 @@ function Admin(props) {
   }, []);
 
   const handleClickStatus = (id) => {
+<<<<<<< HEAD
       let newData = {
         id: id,
         status: "approve"
@@ -23,6 +28,17 @@ function Admin(props) {
 
       console.log(newData)
   }
+=======
+    props.getDanaById(id);
+    console.log(props.getDanaById(id));
+    let newData = {
+      status: "approve",
+    };
+    // props.putDataDana(newData)
+
+    console.log(newData);
+  };
+>>>>>>> cbd07abd30ef46daef37020ed1a5d37f1d127159
 
   return (
     <div>
@@ -46,6 +62,7 @@ function Admin(props) {
           </thead>
           <tbody>
             {props.data.map((item, index) => {
+<<<<<<< HEAD
                 if(item.status == "waiting")
                     return <tr key={item.id}>
                                 <td>{index + 1}</td>
@@ -59,6 +76,33 @@ function Admin(props) {
                                       Approve
                                     </Button>{' '}</td>
                             </tr>
+=======
+              if (item.status == "waiting")
+                return (
+                  <tr key={item.id}>
+                    <td>{index + 1}</td>
+                    <td>{item.nama}</td>
+                    <td>{item.judul}</td>
+                    <td>{item.tujuan}</td>
+                    <td>{item.id}</td>
+                    <td>
+                      <Badge variant="warning">{item.status}</Badge>
+                    </td>
+                    <td>
+                      <Button
+                        variant="primary"
+                        size="sm"
+                        onClick={() => {
+                          handleClickStatus(item.id);
+                        }}
+                        value={"Approve"}
+                      >
+                        Approve
+                      </Button>{" "}
+                    </td>
+                  </tr>
+                );
+>>>>>>> cbd07abd30ef46daef37020ed1a5d37f1d127159
             })}
           </tbody>
         </Table>
@@ -73,5 +117,9 @@ const mapStateToProps = (props) => {
   };
 };
 
+<<<<<<< HEAD
 const mapDispatchToProps = { getDataDana, putDataEdit };
+=======
+const mapDispatchToProps = { getDataDana, getDanaById };
+>>>>>>> cbd07abd30ef46daef37020ed1a5d37f1d127159
 export default connect(mapStateToProps, mapDispatchToProps)(Admin);
