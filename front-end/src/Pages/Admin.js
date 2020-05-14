@@ -4,9 +4,7 @@ import { Jumbotron, Table, Container, Badge, Button } from "react-bootstrap";
 
 import { connect } from "react-redux";
 
-import { getDataDana, putDataEdit } from "../Action/AdminAction";
-// import { getDataDana, getDanaById } from "../Action/AdminAction";
-
+import { getDataDana, putDataEdit, getDanaById } from "../Action/AdminAction";
 import "../Components/Admin/admin.scss";
 
 function Admin(props) {
@@ -22,19 +20,19 @@ function Admin(props) {
         id: id,
         status: "approve"
       }
-      props.putDataEdit(newData)
+      props.putDataEdit(newData, id)
 
       console.log(newData)
-  }
-  //   props.getDanaById(id);
-  //   console.log(props.getDanaById(id));
-  //   let newData = {
-  //     status: "approve",
-  //   };
-  //   // props.putDataDana(newData)
+  // }
+    // props.getDanaById(id);
+    // console.log(props.getDanaById(id));
+    // let newData = {
+    //   status: "approve",
+    // };
+    // props.putDataEdit(newData)
 
-  //   console.log(newData);
-  // };
+    // console.log(newData);
+  };
 
   return (
     <div>
@@ -58,21 +56,7 @@ function Admin(props) {
           </thead>
           <tbody>
             {props.data.map((item, index) => {
-                if(item.status == "waiting")
-                    return <tr key={item.id}>
-                                <td>{index + 1}</td>
-                                <td>{item.nama}</td>
-                                <td>{item.judul}</td>
-                                <td>{item.tujuan}</td>
-                                <td><Badge variant="warning">{item.status}</Badge></td>
-                                <td><Button variant="primary" size="sm" 
-                                        onClick={() => handleClickStatus(item.id)}
-                                      >
-                                      Approve
-                                    </Button>{' '}</td>
-                            </tr>
-
-              {/* if (item.status == "waiting")
+              if (item.status === "waiting")
                 return (
                   <tr key={item.id}>
                     <td>{index + 1}</td>
@@ -96,7 +80,7 @@ function Admin(props) {
                       </Button>{" "}
                     </td>
                   </tr>
-                ); */}
+                );
 
             })}
           </tbody>
@@ -113,7 +97,13 @@ const mapStateToProps = (props) => {
 };
 
 
-const mapDispatchToProps = { getDataDana, putDataEdit };
+const mapDispatchToProps = (dispatch) => { 
+  return {
+    getDataDana: () => dispatch(getDataDana()),
+    putDataEdit: (data, id) => 
+      dispatch(putDataEdit(data, id)),
+  }
+};
 
 // const mapDispatchToProps = { getDataDana, getDanaById };
 

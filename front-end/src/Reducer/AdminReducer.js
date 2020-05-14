@@ -1,4 +1,4 @@
-import { GET_DANA, GET_DANA_SUCCESS, GET_DANA_FAILED } from '../Action/AdminAction'
+import { GET_DANA, GET_DANA_SUCCESS, GET_DANA_FAILED, PUT_DANA_EDIT } from '../Action/AdminAction'
 
 const initialState = {
     dana: [],

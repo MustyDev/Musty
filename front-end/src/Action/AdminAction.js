@@ -39,7 +39,7 @@ export function getDataDana() {
 export const putDataEdit = (data, id) =>{
     return (dispatch) => {
         axios
-            .put('https://5eb8babcbb17460016b32a07.mockapi.io/data'+id, data)
+            .put('https://5eb8babcbb17460016b32a07.mockapi.io/data/'+ id, data)
             .then(() => dispatch(getDataDana()))
             .catch(error => dispatch(getDanaFailed(error.massage)))
     }
