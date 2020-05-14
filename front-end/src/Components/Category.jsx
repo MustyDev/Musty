@@ -4,6 +4,8 @@ import { FaGuitar } from "react-icons/fa";
 import { IoMdMicrophone } from "react-icons/io";
 import { MdAlbum } from "react-icons/md";
 import { Link } from "react-router-dom";
+import "../App.css";
+
 function Category() {
   return (
     <div>

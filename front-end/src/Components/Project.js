@@ -3,7 +3,7 @@ import { Card, CardDeck, ProgressBar, Button } from "react-bootstrap";
 import "../App.css";
 
 function Project() {
-  const now = 90;
+  const now = 50;
   const progressInstance = <ProgressBar now={now} label={`${now}%`} />;
 
   return (
@@ -25,7 +25,7 @@ function Project() {
             <p>{progressInstance}</p>
             <h5>Rp.4.000.000 Terkumpul dari Rp.5.000.000</h5>
             <div className="text-center">
-              <Button variant="dark">Details Charity</Button>
+              <Button className="button-charity">Details Charity</Button>
             </div>
           </Card.Body>
           <Card.Footer>
@@ -44,7 +44,7 @@ function Project() {
             <p>{progressInstance}</p>
             <h5>Rp.4.000.000 Terkumpul dari Rp.5.000.000</h5>
             <div className="text-center">
-              <Button variant="dark">Details Charity</Button>
+              <Button className="button-charity">Details Charity</Button>
             </div>
           </Card.Body>
           <Card.Footer>
@@ -62,7 +62,7 @@ function Project() {
             <p>{progressInstance}</p>
             <h5>Rp.4.000.000 Terkumpul dari Rp.5.000.000</h5>
             <div className="text-center">
-              <Button variant="dark">Details Charity</Button>
+              <Button className="button-charity">Details Charity</Button>
             </div>
           </Card.Body>
           <Card.Footer>
@@ -83,7 +83,7 @@ function Project() {
             <p>{progressInstance}</p>
             <h5>Rp.4.000.000 Terkumpul dari Rp.5.000.000</h5>
             <div className="text-center">
-              <Button variant="dark">Details Charity</Button>
+              <Button className="button-charity">Details Charity</Button>
             </div>
           </Card.Body>
           <Card.Footer>
@@ -102,7 +102,7 @@ function Project() {
             <p>{progressInstance}</p>
             <h5>Rp.4.000.000 Terkumpul dari Rp.5.000.000</h5>
             <div className="text-center">
-              <Button variant="dark">Details Charity</Button>
+              <Button className="button-charity">Details Charity</Button>
             </div>
           </Card.Body>
           <Card.Footer>
@@ -120,7 +120,7 @@ function Project() {
             <p>{progressInstance}</p>
             <h5>Rp.4.000.000 Terkumpul dari Rp.5.000.000</h5>
             <div className="text-center">
-              <Button variant="dark">Details Charity</Button>
+              <Button className="button-charity">Details Charity</Button>
             </div>
           </Card.Body>
           <Card.Footer>

@@ -51,7 +51,11 @@ function MenuBar() {
               </Link>
             </Nav.Link>
 
-            <NavDropdown title="Kategori" id="collasible-nav-dropdown">
+            <NavDropdown
+              title="Kategori"
+              className="link-category"
+              id="collasible-nav-dropdown"
+            >
               <NavDropdown.Item>
                 <Link
                   to="/"
@@ -88,7 +92,7 @@ function MenuBar() {
                 placeholder="Search"
                 className="mr-sm-2"
               />
-              <Button className="buttonSearch" variant="dark">
+              <Button className="buttonSearch" variant="primary">
                 Search
               </Button>
             </Form>
