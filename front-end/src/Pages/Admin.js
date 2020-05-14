@@ -4,7 +4,7 @@ import { Jumbotron, Table, Container, Badge, Button } from "react-bootstrap";
 
 import { connect } from "react-redux";
 
-import { getDataDana } from "../Action/AdminAction";
+import { getDataDana, getDanaById } from "../Action/AdminAction";
 import "../Components/Admin/admin.scss";
 
 function Admin(props) {
@@ -14,17 +14,16 @@ function Admin(props) {
     props.getDataDana();
   }, []);
 
-  const handleClickStatus = (e) => {
-      e.preventDefault()
+  const handleClickStatus = (id) => {
+    props.getDanaById(id);
+    console.log(props.getDanaById(id));
+    let newData = {
+      status: "approve",
+    };
+    // props.putDataDana(newData)
 
-      let newData = {
-        id: props.editData.id,
-        status: "approve"
-      }
-      // props.putDataDana(newData)
-
-      console.log(newData)
-  }
+    console.log(newData);
+  };
 
   return (
     <div>
@@ -48,20 +47,31 @@ function Admin(props) {
           </thead>
           <tbody>
             {props.data.map((item, index) => {
-                if(item.status == "waiting")
-                    return <tr key={item.id}>
-                                <td>{index + 1}</td>
-                                <td>{item.nama}</td>
-                                <td>{item.judul}</td>
-                                <td>{item.tujuan}</td>
-                                <td><Badge variant="warning">{item.status}</Badge></td>
-                                <td><Button variant="primary" size="sm" 
-                                        onClick={handleClickStatus}
-                                        value={"Approve"}
-                                      >
-                                      Approve
-                                    </Button>{' '}</td>
-                            </tr>
+              if (item.status == "waiting")
+                return (
+                  <tr key={item.id}>
+                    <td>{index + 1}</td>
+                    <td>{item.nama}</td>
+                    <td>{item.judul}</td>
+                    <td>{item.tujuan}</td>
+                    <td>{item.id}</td>
+                    <td>
+                      <Badge variant="warning">{item.status}</Badge>
+                    </td>
+                    <td>
+                      <Button
+                        variant="primary"
+                        size="sm"
+                        onClick={() => {
+                          handleClickStatus(item.id);
+                        }}
+                        value={"Approve"}
+                      >
+                        Approve
+                      </Button>{" "}
+                    </td>
+                  </tr>
+                );
             })}
           </tbody>
         </Table>
@@ -76,5 +86,5 @@ const mapStateToProps = (props) => {
   };
 };
 
-const mapDispatchToProps = { getDataDana };
+const mapDispatchToProps = { getDataDana, getDanaById };
 export default connect(mapStateToProps, mapDispatchToProps)(Admin);
