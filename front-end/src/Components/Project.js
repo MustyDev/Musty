@@ -58,7 +58,7 @@ function Project() {
           />
           <Card.Body>
             <h4>Galang Dana Konser (Nama Konser)</h4>
-            Oleh (Nama Penggalang)
+            <span className="text-muted">Oleh (Nama Penggalang)</span>
             <p>{progressInstance}</p>
             <h5>Rp.4.000.000 Terkumpul dari Rp.5.000.000</h5>
             <div className="text-center">

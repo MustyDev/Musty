@@ -48,11 +48,9 @@ const Nav = () => {
             <Link to="/donate" className="text-donasi">
               Mulai Donasi
             </Link>
-            <FiLogIn />
-            <Link to="/login" className="text">
+            <Link to="/login" className="text text-muted">
               Login
             </Link>
-            <text>/</text>
             <Link to="/register" className="text">
               Register
             </Link>

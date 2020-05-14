@@ -37,7 +37,7 @@ function MenuBar() {
                 style={{ textDecoration: "none" }}
                 className="link-category"
               >
-                Home
+                Beranda
               </Link>
             </Nav.Link>
             <Nav.Link>
@@ -47,12 +47,12 @@ function MenuBar() {
                 style={{ textDecoration: "none" }}
                 className="link-category"
               >
-                About
+                Tentang Kami
               </Link>
             </Nav.Link>
 
             <NavDropdown
-              title="Kategori"
+              title="kategori"
               className="link-category"
               id="collasible-nav-dropdown"
             >
