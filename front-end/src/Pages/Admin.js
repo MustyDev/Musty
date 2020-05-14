@@ -14,14 +14,12 @@ function Admin(props) {
     props.getDataDana();
   }, []);
 
-  const handleClickStatus = (e) => {
-      e.preventDefault()
-
+  const handleClickStatus = (id) => {
       let newData = {
-        id: props.editData.id,
+        id: id,
         status: "approve"
       }
-      // props.putDataDana(newData)
+      // // props.putDataDana(newData)
 
       console.log(newData)
   }
@@ -56,8 +54,7 @@ function Admin(props) {
                                 <td>{item.tujuan}</td>
                                 <td><Badge variant="warning">{item.status}</Badge></td>
                                 <td><Button variant="primary" size="sm" 
-                                        onClick={handleClickStatus}
-                                        value={"Approve"}
+                                        onClick={() => handleClickStatus(item.id)}
                                       >
                                       Approve
                                     </Button>{' '}</td>
