@@ -4,7 +4,7 @@ import { Jumbotron, Table, Container, Badge, Button } from "react-bootstrap";
 
 import { connect } from "react-redux";
 
-import { getDataDana } from "../Action/AdminAction";
+import { getDataDana, putDataEdit } from "../Action/AdminAction";
 import "../Components/Admin/admin.scss";
 
 function Admin(props) {
@@ -19,7 +19,7 @@ function Admin(props) {
         id: id,
         status: "approve"
       }
-      // // props.putDataDana(newData)
+      props.putDataEdit(newData)
 
       console.log(newData)
   }
@@ -73,5 +73,5 @@ const mapStateToProps = (props) => {
   };
 };
 
-const mapDispatchToProps = { getDataDana };
+const mapDispatchToProps = { getDataDana, putDataEdit };
 export default connect(mapStateToProps, mapDispatchToProps)(Admin);
