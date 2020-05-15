@@ -149,9 +149,11 @@ footer {
   margin-right: 20px;
 }
 
-.progress {
+.progress-bar {
   background-color: lightgray;
+  /* margin-top: 10px; */
 }
+
 .progress-bar {
   background-color: #1f98e5;
 }
@@ -177,12 +179,12 @@ footer {
 }
 
 .card-galangdana {
-  box-shadow: 8px 8px 14px 14px rgba(5, 5, 5, 0.2);
-  border-radius: 30px;
+  box-shadow: 0px 3px 3px 2px #dddddd;
+  border-radius: 20px;
 }
 
 .card-galangdana img {
-  border-radius: 30px;
+  border-radius: 20px 20px 0px 0px;
 }
 .button-charity {
   background-color: #dc23d4;

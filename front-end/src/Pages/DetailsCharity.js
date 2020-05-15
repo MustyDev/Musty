@@ -99,7 +99,7 @@ export default function DetailsCharity() {
                 <div className="card-body">
                   <h1 className="card-title">Galang Dana Sheila On 7</h1>
                   <div className="progress-bar">
-                    <ProgressBar variant="dark" now={80} />
+                    <ProgressBar variant="primary" now={80} />
                   </div>
                   <div className="status">
                     <p className="card-text">

@@ -45,7 +45,7 @@ const Nav = () => {
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
             <GrNotes />
-            <Link to="/donate" className="text-donasi">
+            <Link to="/form-tourcharity" className="text-donasi">
               Mulai Donasi
             </Link>
             <Link to="/login" className="text text-muted">
