@@ -1,15 +1,10 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-<<<<<<< HEAD
-import { Jumbotron, Button, Form, ProgressBar } from "react-bootstrap";
 import { connect } from 'react-redux'
 import { getDetailDonasi } from '../Action/DetailAction'
-import Donate from "./Donate";
-=======
 import { Jumbotron, ProgressBar } from "react-bootstrap";
-
 import Donate from "../Components/Donate";
->>>>>>> a78a515b0eef92fa12746e51ca1a63832139aa4e
+
 
 export default function DetailsCharity() {
   const StyleDiv = styled.div`
