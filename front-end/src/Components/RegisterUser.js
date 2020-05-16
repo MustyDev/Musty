@@ -45,7 +45,7 @@ function RegisterUser() {
           // onClick={handleAddUser}
           type="submit"
         >
-          Register
+          Daftar
         </Button>
       </Form>
     </div>

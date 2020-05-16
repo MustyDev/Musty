@@ -81,11 +81,16 @@ footer {
   color: #1f98e5;
 }
 
+.progress-bar-project {
+  margin-top: 10px;
+}
+
 .container-category {
   height: 200px;
   position: relative;
   text-align: center;
 }
+
 .judul {
   margin-top: 20px;
 }

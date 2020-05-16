@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { Jumbotron, Button, Form, ProgressBar } from "react-bootstrap";
+import { Jumbotron, ProgressBar } from "react-bootstrap";
 
-import Donate from "./Donate";
+import Donate from "../Components/Donate";
 
 export default function DetailsCharity() {
   const StyleDiv = styled.div`
@@ -166,8 +166,8 @@ export default function DetailsCharity() {
                 className="card-img-top"
                 src="https://img.icons8.com/bubbles/200/000000/bartender-male.png"
               />
-              <div class="card-img-overlay">
-                <h6 class="card-title">John Doe</h6>
+              <div className="card-img-overlay">
+                <h6 className="card-title">John Doe</h6>
               </div>
               <h5>Rp.100.000</h5>
             </div>

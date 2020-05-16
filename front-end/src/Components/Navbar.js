@@ -46,13 +46,13 @@ const Nav = () => {
           <Navbar.Text>
             <GrNotes />
             <Link to="/form-tourcharity" className="text-donasi">
-              Mulai Donasi
+              Buat Donasi
             </Link>
             <Link to="/login" className="text text-muted">
-              Login
+              Masuk
             </Link>
             <Link to="/register" className="text">
-              Register
+              Daftar
             </Link>
           </Navbar.Text>
         </Navbar.Collapse>

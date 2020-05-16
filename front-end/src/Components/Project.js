@@ -11,7 +11,9 @@ import "../App.css";
 
 function Project() {
   const now = 50;
-  const progressInstance = <ProgressBar now={now} label={`${now}%`} />;
+  const progressInstance = (
+    <ProgressBar now={now} label={`${now}%`} className="progress-bar-project" />
+  );
 
   const [data, setData] = useState([]);
 
@@ -32,7 +34,7 @@ function Project() {
           Mulai Donasi untuk Musisi Idola Kamu.
         </h5>
         <div>
-          <CardDeck className="card-deck">
+          <CardDeck className="card-deck" href="/details-charity">
             <Card className="card-galangdana">
               <Card.Img className="card-img" variant="top" src={data.image} />
               <Card.Body>
@@ -125,6 +127,7 @@ function Project() {
                 <small>1 Januari 2020 - 30 April 2020</small>
               </Card.Footer>
             </Card>
+
             <Card className="card-galangdana">
               <Card.Img
                 variant="top"
@@ -136,6 +139,7 @@ function Project() {
                 <p>{progressInstance}</p>
                 <h5>Rp.4.000.000 Terkumpul dari Rp.5.000.000</h5>
                 <div className="text-center">
+                  <Card.Link href="#">Read more...</Card.Link>
                   <Button className="button-charity">Details Charity</Button>
                 </div>
               </Card.Body>

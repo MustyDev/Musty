@@ -83,7 +83,7 @@ const RegisterMusisi = (props) => {
           // onClick={handleAddUser}
           type="submit"
         >
-          Register
+          Daftar
         </Button>
       </Form>
     </div>

@@ -11,7 +11,20 @@ const Donate = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({
+    name: "",
+    donasi: "",
+  });
+
+  const SwitchStatus = () => {
+    // console.log(event.target.value);
+    var s = document.getElementById("switch");
+    if (s.checked) {
+      console.log("Checked");
+    } else {
+      console.log("Not Checked");
+    }
+  };
 
   // const handleClick = (event) => {
   //   event.preventDefault();
@@ -49,19 +62,22 @@ const Donate = () => {
             required
           />
           <InputGroup>
-            <InputGroup.Prepend>
+            <InputGroup.Prepend className="mt-2">
               <InputGroup.Text id="inputGroupPrepend">Rp</InputGroup.Text>
             </InputGroup.Prepend>
             <Form.Control
+              className="mt-2"
               type="number"
               name="donasi"
               placeholder="0"
             ></Form.Control>
           </InputGroup>
-          <Form.Check
-            type="switch"
-            id="custom-switch"
-            label="Check this switch"
+          <Form.Switch
+            className="mt-3"
+            type="checkbox"
+            id="switch"
+            onClick={() => SwitchStatus()}
+            label="Sembunyikan nama saya (Anonim)"
           />
         </Modal.Body>
         <Modal.Footer>

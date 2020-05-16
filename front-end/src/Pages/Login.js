@@ -36,7 +36,7 @@ const Login = () => {
               />
             </Form.Group>
             <Button className="px-4" variant="primary" type="submit">
-              Login
+              Masuk
             </Button>
           </Form>
         </Container>

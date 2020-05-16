@@ -31,7 +31,7 @@ const Register = () => {
             </Button>
             <Button className="buttonRegister2">
               <Link to="/register-user" className="buttonRegister">
-                Daftar sebagai Pendonasi
+                Daftar sebagai Donatur
               </Link>
             </Button>
             <Switch>

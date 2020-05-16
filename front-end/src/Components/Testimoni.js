@@ -7,7 +7,7 @@ import Person3 from "../Images/person-3.jpg";
 
 function Testimoni() {
   return (
-    <div className="testimoni">
+    <div>
       <h1 className="text-title">Testimoni</h1>
       <Row className="show-grid text-center">
         <Col xs={12} sm={4} className="person-wrapper">
