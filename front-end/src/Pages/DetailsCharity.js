@@ -1,9 +1,15 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
+<<<<<<< HEAD
 import { Jumbotron, Button, Form, ProgressBar } from "react-bootstrap";
 import { connect } from 'react-redux'
 import { getDetailDonasi } from '../Action/DetailAction'
 import Donate from "./Donate";
+=======
+import { Jumbotron, ProgressBar } from "react-bootstrap";
+
+import Donate from "../Components/Donate";
+>>>>>>> a78a515b0eef92fa12746e51ca1a63832139aa4e
 
 export default function DetailsCharity() {
   const StyleDiv = styled.div`
@@ -100,7 +106,7 @@ export default function DetailsCharity() {
                 <div className="card-body">
                   <h1 className="card-title">Galang Dana Sheila On 7</h1>
                   <div className="progress-bar">
-                    <ProgressBar variant="dark" now={80} />
+                    <ProgressBar variant="primary" now={80} />
                   </div>
                   <div className="status">
                     <p className="card-text">
@@ -167,8 +173,8 @@ export default function DetailsCharity() {
                 className="card-img-top"
                 src="https://img.icons8.com/bubbles/200/000000/bartender-male.png"
               />
-              <div class="card-img-overlay">
-                <h6 class="card-title">John Doe</h6>
+              <div className="card-img-overlay">
+                <h6 className="card-title">John Doe</h6>
               </div>
               <h5>Rp.100.000</h5>
             </div>

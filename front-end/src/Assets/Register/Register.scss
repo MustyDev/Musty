@@ -40,6 +40,16 @@ h1 {
 }
 
 .buttonRegister {
-  display: flex;
-  justify-items: flex-end;
+  // display: flex;
+  // justify-content: space-evenly;
+  color: white;
+}
+.buttonRegister1 {
+  float: center;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+.buttonRegister2 {
+  float: right;
+  margin-right: 180px;
 }

@@ -8,97 +8,98 @@ import {
   Form,
   FormControl,
   Button,
+  Container,
 } from "react-bootstrap";
 import "../App.css";
 
 function MenuBar() {
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-        <Navbar.Brand>
-          <Link to="/">
-            <img
-              src={Logo}
-              width="140px"
-              height="65px"
-              className="d-inline-block align-top"
-              alt="Musty Logo"
-            />
-          </Link>
-        </Navbar.Brand>
-
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="navbar-nav ml-auto mx-auto">
-            <Nav.Link>
-              {" "}
-              <Link
-                to="/"
-                style={{ textDecoration: "none" }}
-                className="link-category"
-              >
-                Beranda
-              </Link>
-            </Nav.Link>
-            <Nav.Link>
-              {" "}
-              <Link
-                to="/about"
-                style={{ textDecoration: "none" }}
-                className="link-category"
-              >
-                Tentang Kami
-              </Link>
-            </Nav.Link>
-
-            <NavDropdown
-              title="kategori"
-              className="link-category"
-              id="collasible-nav-dropdown"
-            >
-              <NavDropdown.Item>
-                <Link
-                  to="/"
-                  style={{ textDecoration: "none" }}
-                  className="link-category"
-                >
-                  Konser
-                </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link
-                  to="/"
-                  style={{ textDecoration: "none" }}
-                  className="link-category"
-                >
-                  Album
-                </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link
-                  to="/"
-                  style={{ textDecoration: "none" }}
-                  className="link-category"
-                >
-                  Alat Musik
-                </Link>
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            <Form inline>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2"
+      <Container fluid>
+        <Navbar collapseOnSelect expand="lg" variant="light">
+          <Navbar.Brand>
+            <Link to="/">
+              <img
+                src={Logo}
+                width="140px"
+                height="65px"
+                className="d-inline-block align-top"
+                alt="Musty Logo"
               />
-              <Button className="buttonSearch" variant="primary">
-                Search
-              </Button>
-            </Form>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+            </Link>
+          </Navbar.Brand>
+
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="navbar-nav ml-auto mx-auto">
+              <Nav.Link>
+                <Link
+                  to="/"
+                  style={{ textDecoration: "none" }}
+                  className="link-category"
+                >
+                  Beranda
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link
+                  to="/about"
+                  style={{ textDecoration: "none" }}
+                  className="link-category"
+                >
+                  Tentang Kami
+                </Link>
+              </Nav.Link>
+
+              <NavDropdown
+                title="kategori"
+                className="link-category"
+                id="collasible-nav-dropdown"
+              >
+                <NavDropdown.Item>
+                  <Link
+                    to="/"
+                    style={{ textDecoration: "none" }}
+                    className="link-category"
+                  >
+                    Konser
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link
+                    to="/"
+                    style={{ textDecoration: "none" }}
+                    className="link-category"
+                  >
+                    Album
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link
+                    to="/"
+                    style={{ textDecoration: "none" }}
+                    className="link-category"
+                  >
+                    Alat Musik
+                  </Link>
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Nav>
+              <Form inline>
+                <FormControl
+                  type="text"
+                  placeholder="Search"
+                  className="mr-sm-2"
+                />
+                <Button className="buttonSearch" variant="primary">
+                  Search
+                </Button>
+              </Form>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </Container>
     </div>
   );
 }
