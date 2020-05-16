@@ -4,7 +4,7 @@ import { Jumbotron, Table, Container, Badge, Button } from "react-bootstrap";
 
 import { connect } from "react-redux";
 
-import { getDataDana, putDataEdit, getDanaById } from "../Action/AdminAction";
+import { getDataDana, putDataEdit, getDataCategory } from "../Action/AdminAction";
 import "../Components/Admin/admin.scss";
 
 function Admin(props) {
@@ -23,16 +23,17 @@ function Admin(props) {
       props.putDataEdit(newData, id)
 
       console.log(newData)
-  // }
-    // props.getDanaById(id);
-    // console.log(props.getDanaById(id));
-    // let newData = {
-    //   status: "approve",
-    // };
-    // props.putDataEdit(newData)
-
-    // console.log(newData);
   };
+
+  const handleClickCategory = (value) =>{
+    console.log(value)
+      let filter = {
+        where : {
+          status: "approve",
+        }
+      }
+      props.getDataCategory(filter)
+  }
 
   return (
     <div>
@@ -56,23 +57,22 @@ function Admin(props) {
           </thead>
           <tbody>
             {props.data.map((item, index) => {
-              if (item.status === "waiting")
+              if (item.Status === "waiting")
                 return (
-                  <tr key={item.id}>
+                  <tr key={item.ID}>
                     <td>{index + 1}</td>
-                    <td>{item.nama}</td>
-                    <td>{item.judul}</td>
-                    <td>{item.tujuan}</td>
-                    <td>{item.id}</td>
+                    <td>{item.Nama}</td>
+                    <td>{item.Judul}</td>
+                    <td>{item.Deskripsi}</td>
                     <td>
-                      <Badge variant="warning">{item.status}</Badge>
+                      <Badge variant="warning">{item.Status}</Badge>
                     </td>
                     <td>
                       <Button
                         variant="primary"
                         size="sm"
                         onClick={() => {
-                          handleClickStatus(item.id);
+                          handleClickStatus(item.ID);
                         }}
                         value={"Approve"}
                       >
@@ -102,9 +102,8 @@ const mapDispatchToProps = (dispatch) => {
     getDataDana: () => dispatch(getDataDana()),
     putDataEdit: (data, id) => 
       dispatch(putDataEdit(data, id)),
+    getDataCategory: (filter) => dispatch(getDataCategory(filter))
   }
 };
-
-// const mapDispatchToProps = { getDataDana, getDanaById };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Admin);
