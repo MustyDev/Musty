@@ -195,3 +195,18 @@ footer {
   background-color: #dc23d4;
   border-color: #dc23d4;
 }
+.card-galangdana :hover {
+  text-decoration: none;
+}
+
+.jumboroton-about {
+  background-image: url(https://images.pexels.com/photos/736355/pexels-photo-736355.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+
+.profile-team {
+  height: 150px;
+  width: 150px;
+}
