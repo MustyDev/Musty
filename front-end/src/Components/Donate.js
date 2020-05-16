@@ -12,15 +12,15 @@ const Donate = () => {
   const handleShow = () => setShow(true);
 
   const [data, setData] = useState({
-    name: "",
-    donasi: "",
+    nama: "",
+    nominal: "",
   });
 
   const SwitchStatus = () => {
     // console.log(event.target.value);
     var s = document.getElementById("switch");
     if (s.checked) {
-      console.log("Checked");
+      data.nama = "anonim";
     } else {
       console.log("Not Checked");
     }
@@ -29,7 +29,7 @@ const Donate = () => {
   // const handleClick = (event) => {
   //   event.preventDefault();
   //   data = {
-  //     name: name,
+  //     nama: nama,
   //     donasi: donasi,
   //   };
   // };
@@ -39,7 +39,7 @@ const Donate = () => {
       .post("https://5e9f471c11b078001679c68f.mockapi.io/user")
       .then((res) => setData(res.data[0]))
       .catch(console.error);
-  }, []);
+  }, data);
 
   return (
     <>
@@ -54,7 +54,7 @@ const Donate = () => {
         <Modal.Body>
           <Form.Control
             type="text"
-            name="name"
+            name="data.nama"
             // value={user.name}
             // onChange={handleChange}
             placeholder="Masukan nama anda"
@@ -68,7 +68,7 @@ const Donate = () => {
             <Form.Control
               className="mt-2"
               type="number"
-              name="donasi"
+              name="data.nominal"
               placeholder="0"
             ></Form.Control>
           </InputGroup>
@@ -90,37 +90,6 @@ const Donate = () => {
         </Modal.Footer>
       </Modal>
     </>
-    // <div>
-    //   <div>
-    //     <Jumbotron className="jumbotronDonate darkenImage">
-    //       <Container>
-    //         <h1>Donasi</h1>
-    //       </Container>
-    //     </Jumbotron>
-    //   </div>
-    //   <div>
-    //     <Container className="containerDonate">
-    //       <Form className="shadow p-3 mb-5 bg-white rounded">
-    //         <Form.Group>
-    //           <Form.Label>Masukan Nominal Donasi</Form.Label>
-    //           <InputGroup>
-    //             <InputGroup.Prepend>
-    //               <InputGroup.Text id="inputGroupPrepend">Rp</InputGroup.Text>
-    //             </InputGroup.Prepend>
-    //             <Form.Control
-    //               type="number"
-    //               name="donasi"
-    //               placeholder="0"
-    //             ></Form.Control>
-    //           </InputGroup>
-    //         </Form.Group>
-    //         <Button className="buttonDonasi" type="submit">
-    //           Donasi
-    //         </Button>
-    //       </Form>
-    //     </Container>
-    //   </div>
-    // </div>
   );
 };
 
