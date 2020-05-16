@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import { Jumbotron, Button, Form, ProgressBar } from "react-bootstrap";
-
+import { connect } from 'react-redux'
+import { getDetailDonasi } from '../Action/DetailAction'
 import Donate from "./Donate";
 
 export default function DetailsCharity() {

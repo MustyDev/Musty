@@ -1,22 +1,12 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { Formik } from 'formik'
-import { Jumbotron, Button, Form } from 'react-bootstrap'
 import { connect } from 'react-redux'
-// import { postDataDonasi } from '../Action/DonateAction'
+
+import { Jumbotron, Button, Form } from 'react-bootstrap'
 
 
 export default function TourCharity() {
-   
-   // const handlePostDonasi = (e) => {
-   //    e.preventDefault();
-
-   //    let newDonasion = {
-   //       id: props.donasi[props.mock.lenght - 1] + 1,
-
-
-   //    }
-   // }
 
    const StyleDiv = styled.div`
    .Jumbo{
@@ -106,9 +96,9 @@ export default function TourCharity() {
                      if (values.endDate === "") {
                         errors.endDate = "Requeired"
                      }
-                     // if (values.urlKarya === "") {
-                     //    errors.urlKarya = "Requeired"
-                     // }
+                     if (values.urlKarya === "") {
+                        errors.urlKarya = "Requeired"
+                     }
                      return errors;
                   }}
                   onSubmit={(values, { setSubmitting }) => {

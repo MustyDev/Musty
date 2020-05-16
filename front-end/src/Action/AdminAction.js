@@ -29,7 +29,7 @@ export function getDanaFailed(error) {
 export function getDataDana() {
   return function (dispatch) {
     dispatch(getDana());
-        axios.get('https://5eb8babcbb17460016b32a07.mockapi.io/data')
+        axios.get('https://musty-api.herokuapp.com/donasi')
         .then(result => dispatch(getDanaSuccess(result.data)))
         .catch(error => dispatch(getDanaFailed(error.massage)))
     }
@@ -39,10 +39,19 @@ export function getDataDana() {
 export const putDataEdit = (data, id) =>{
     return (dispatch) => {
         axios
-            .put('https://5eb8babcbb17460016b32a07.mockapi.io/data/'+ id, data)
+            .put('https://musty-api.herokuapp.com/donasi/status/'+ id, data)
             .then(() => dispatch(getDataDana()))
             .catch(error => dispatch(getDanaFailed(error.massage)))
     }
+}
+
+export const getDataCategory = (value) => {
+  return (dispatch) => {
+      axios
+          .get('https://5eb8babcbb17460016b32a07.mockapi.io/data/tabs?filter=' + JSON.stringify(value))
+          .then(response => {this.tabs = response.data})
+          .catch(error => dispatch(getDanaFailed(error.massage)))
+  }
 }
 
 // export const getDanaById = (id) => {
