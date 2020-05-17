@@ -26,6 +26,12 @@ export function getDanaFailed(error) {
   };
 }
 
+export function putDanaEdit(data){
+  return {
+    type: PUT_DANA_EDIT,
+    data
+  }
+}
 export function getDataDana() {
   return function (dispatch) {
     dispatch(getDana());
@@ -39,11 +45,12 @@ export function getDataDana() {
 export const putDataEdit = (data, id) =>{
     return (dispatch) => {
         axios
-            .put('https://musty-api.herokuapp.com/donasi/status/'+ id, data)
+            .put(`https://musty-api.herokuapp.com/donasi/status/${id}`, JSON.stringify(data))
             .then(() => dispatch(getDataDana()))
             .catch(error => dispatch(getDanaFailed(error.massage)))
     }
 }
+
 
 export const getDataCategory = (value) => {
   return (dispatch) => {
