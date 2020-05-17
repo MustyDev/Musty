@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { connect } from 'react-redux'
 import { getDetailDonasi } from '../Action/DetailAction'
 import { Jumbotron, ProgressBar } from "react-bootstrap";
-import Donate from "../Components/Donate";
+import Donate from "../Components/Detail/Donate";
 
 
 export default function DetailsCharity() {

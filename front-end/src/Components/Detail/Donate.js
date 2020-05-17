@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { Form, InputGroup, Button, Modal } from "react-bootstrap";
 
-import "../Assets/Donate/Donate.scss";
+import "../../Assets/Donate/Donate.scss";
 import axios from "axios";
 
 const Donate = () => {

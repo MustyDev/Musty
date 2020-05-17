@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
-import "../Assets/Register/Register.scss";
+import "../../Assets/Register/Register.scss";
 
 function RegisterUser() {
   return (

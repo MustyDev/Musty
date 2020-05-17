@@ -14,7 +14,7 @@ import Nav from "./Components/Navbar";
 import Footer from "./Components/Footbar";
 import MenuBar from "./Components/Menubar";
 import DetailsCharity from "./Pages/DetailsCharity";
-import Donate from "./Components/Donate";
+import Donate from "./Components/Detail/Donate";
 
 function App() {
   return (

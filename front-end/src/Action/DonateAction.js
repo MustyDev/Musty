@@ -10,8 +10,7 @@ export const setInputData = (data) => {
     }
 }
 
-export const inputDonasi = (values, history, event) => {
-    event.preventDefault()
+export const inputDonasi = (values, history) => {
 
     console.log("tes", values, history)
 
