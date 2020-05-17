@@ -10,15 +10,7 @@ function Project() {
     <ProgressBar now={now} label={`${now}%`} className="progress-bar-project" />
   );
 
-  const [data, setData] = useState(
-    []
-    // judul: "",
-    // nama: "",
-    // nominal: "",
-    // url: "",
-    // waktu_start: "",
-    // waktu_end: "",
-  );
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
