@@ -5,11 +5,7 @@ import { getDetailDonasi } from "../Action/DetailAction";
 import { Jumbotron, ProgressBar } from "react-bootstrap";
 import Donate from "../Components/Donate";
 
-export default function DetailsCharity(props) {
-  useEffect(() => {
-    props.getDetailDonasi();
-  }, []);
-
+function DetailsCharity(props) {
   const StyleDiv = styled.div`
     .Jumbo {
       background-color: #584c4c !important ;
@@ -78,14 +74,23 @@ export default function DetailsCharity(props) {
     }
   `;
 
+  // useEffect(() => {
+  //   props.getDetailDonasi();
+  // }, []);
+
   return (
     <Fragment>
       <StyleDiv>
         <Jumbotron className="Jumbo">
-          <h1 className="Title">{data.Nama} </h1>
+          <h1 className="Title">Detail Donasi</h1>
         </Jumbotron>
       </StyleDiv>
       <StyleCard>
+        {/* {props.data.map(item => {
+          return (
+            
+          )
+        })} */}
         <div className="container col-md-10 animated zoomIn" id="containerCard">
           <div
             id="cardItem"
@@ -182,3 +187,19 @@ export default function DetailsCharity(props) {
     </Fragment>
   );
 }
+
+// const mapStateToProps = (props) => {
+//   return {
+//     data: props.detail,
+//   };
+// };
+
+// const mapDispatchToProps = (dispatch) => {
+//   data;
+//   return {
+//     getDetailDonasi: () => dispatch(getDetailDonasi()),
+//   };
+// };
+
+// export default connect(mapStateToProps, mapDispatchToProps)(DetailsCharity);
+export default DetailsCharity;

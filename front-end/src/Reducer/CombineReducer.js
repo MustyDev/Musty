@@ -1,11 +1,13 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from "redux";
 
-import getDana from './AdminReducer'
-import donate from './DonateReducer'
+import getDana from "./AdminReducer";
+import donate from "./DonateReducer";
+import getDetail from "./DetailReducer";
 
 const index = combineReducers({
-    getDana,
-    donate
-})
+  getDana,
+  donate,
+  getDetail,
+});
 
-export default index
+export default index;

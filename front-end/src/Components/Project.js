@@ -6,7 +6,9 @@ import "../App.css";
 
 function Project() {
   const now = 50;
-  const progressInstance = <ProgressBar now={now} label={`${now}%`} />;
+  const progressInstance = (
+    <ProgressBar now={now} label={`${now}%`} className="progress-bar-project" />
+  );
 
   const [data, setData] = useState(
     []
