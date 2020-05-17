@@ -1,4 +1,4 @@
-import { MUSISI_REGISTER } from '../Action/RegisterAction'
+import { MUSISI_REGISTER, USER_REGISTER } from '../Action/RegisterAction'
 
 const initialState = {
     data: [],
@@ -11,6 +11,10 @@ const musisi = (state = initialState, action) => {
         case MUSISI_REGISTER:
             return{
                 registerData: action.payload,
+            }
+        case USER_REGISTER:
+            return{
+                registerData:action.payload
             }
         default:
             return state

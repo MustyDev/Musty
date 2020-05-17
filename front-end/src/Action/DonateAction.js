@@ -10,7 +10,7 @@ export const setInputData = (data) => {
     }
 }
 
-export const inputDonasi = (values, history) => {
+export const inputDonasi = (values, history) => (dispatch) => {
 
     console.log("tes", values, history)
 
@@ -35,7 +35,7 @@ export const inputDonasi = (values, history) => {
         .then((response) => {
             console.log(response);
             //dikirim ke reducers
-            dispatchEvent(setInputData(response.data))
+            dispatch(setInputData(response.data))
             history.push("/")
         })
         .catch((error) => {
