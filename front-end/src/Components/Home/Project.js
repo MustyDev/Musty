@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Card, CardDeck, ProgressBar, Container } from "react-bootstrap";
-import "../App.css";
+import "../../App.css";
 
 function Project() {
   const now = 50;

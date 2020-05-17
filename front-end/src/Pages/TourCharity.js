@@ -105,11 +105,9 @@ export default function TourCharity(props) {
                      }
                      return errors;
                   }}
-                  onSubmit={(values, { setSubmitting }) => {
-                     //   alert(JSON.stringify(values, null, 2));
-                     //   setSubmitting(false);
-                     
-                   }}
+                  onSubmit={(values) => 
+                     dispatch(inputDonasi(values, history))
+                  }
                >
                   {({
                      values,
@@ -122,7 +120,7 @@ export default function TourCharity(props) {
                   }) => {
                      return (
 
-                        <Form className="input" onSubmit={(event) => dispatch(inputDonasi(values, history, event))}>
+                        <Form className="input" onSubmit={handleSubmit}>
                            <Form.Group>
                               <Form.Label>Judul Donasi</Form.Label>
                               <Form.Control

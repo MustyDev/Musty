@@ -18,7 +18,7 @@ function Admin(props) {
 
       let newData = {
         id: id,
-        status: "waiting",
+        Status: "waiting",
       }
       props.putDataEdit(newData, id)
 
@@ -92,7 +92,7 @@ function Admin(props) {
 
 const mapStateToProps = (props) => {
   return {
-    data: props.dana,
+    data: props.getDana.dana,
   };
 };
 

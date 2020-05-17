@@ -1,8 +1,8 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import Header from "../Images/Header.jpg";
-import Header2 from "../Images/concert2.1.jpg";
-import Header3 from "../Images/concert4.1.jpg";
+import Header from "../../Images/Header.jpg";
+import Header2 from "../../Images/concert2.1.jpg";
+import Header3 from "../../Images/concert4.1.jpg";
 
 const Crsl = () => {
   return (

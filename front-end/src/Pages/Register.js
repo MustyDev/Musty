@@ -8,8 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../Assets/Register/Register.scss";
 
 import { withRouter } from "react-router-dom";
-import RegisterMusisi from "../Components/RegisterMusisi";
-import RegisterUser from "../Components/RegisterUser";
+import RegisterMusisi from "../Components/Register/RegisterMusisi";
+import RegisterUser from "../Components/Register/RegisterUser";
 
 const Register = () => {
   return (

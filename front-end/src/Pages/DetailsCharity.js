@@ -1,9 +1,13 @@
 import React, { Fragment, useEffect } from "react";
+
 import styled from "styled-components";
+
 import { connect } from "react-redux";
-import { getDetailDonasi } from "../Action/DetailAction";
+
 import { Jumbotron, ProgressBar } from "react-bootstrap";
-import Donate from "../Components/Donate";
+
+import { getDetailDonasi } from "../Action/DetailAction";
+import Donate from "../Components/Detail/Donate";
 
 function DetailsCharity(props) {
   const StyleDiv = styled.div`
@@ -82,7 +86,11 @@ function DetailsCharity(props) {
     <Fragment>
       <StyleDiv>
         <Jumbotron className="Jumbo">
+<<<<<<< HEAD
           <h1 className="Title">Detail Donasi</h1>
+=======
+          <h1 className="Title"> </h1>
+>>>>>>> f241f2f5afc3a6f00bae8c819be7cb9679e2fa13
         </Jumbotron>
       </StyleDiv>
       <StyleCard>

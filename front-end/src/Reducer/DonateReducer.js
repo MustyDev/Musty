@@ -9,7 +9,7 @@ const donate = (state = initialState, action) => {
     switch(action.type){
         case INPUT_DATA_DONASI:
             return{
-                donateData: action.payload
+                data: action.payload
             }
         default:
             return state;
