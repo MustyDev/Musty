@@ -86,11 +86,7 @@ function DetailsCharity(props) {
     <Fragment>
       <StyleDiv>
         <Jumbotron className="Jumbo">
-<<<<<<< HEAD
           <h1 className="Title">Detail Donasi</h1>
-=======
-          <h1 className="Title"> </h1>
->>>>>>> f241f2f5afc3a6f00bae8c819be7cb9679e2fa13
         </Jumbotron>
       </StyleDiv>
       <StyleCard>
