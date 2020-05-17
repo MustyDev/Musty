@@ -1,23 +1,29 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Formik } from 'formik'
+import { useHistory } from 'react-router-dom'
 import { Jumbotron, Button, Form } from 'react-bootstrap'
-import { connect } from 'react-redux'
-// import { postDataDonasi } from '../Action/DonateAction'
+import { useDispatch, useSelector } from 'react-redux'
+import { inputDonasi } from '../Action/DonateAction'
 
 
-export default function TourCharity() {
-   
-   // const handlePostDonasi = (e) => {
-   //    e.preventDefault();
+export default function TourCharity(props) {
+   const history = useHistory();
+   const dispatch = useDispatch();
 
-   //    let newDonasion = {
-   //       id: props.donasi[props.mock.lenght - 1] + 1,
-
-
-   //    }
-   // }
-
+   // const [donasi, setDonasi] = useState({
+   //    kategori: "",
+   //    nominal: "",
+   //    nama: "",
+   //    judul: "",
+   //    status: "waiting",
+   //    url: "",
+   //    organisasi: "",
+   //    deskripsi: "",
+   //    email: "",
+   //    waktu_start: "",
+   //    waktu_end: "",
+   // })
    const StyleDiv = styled.div`
    .Jumbo{
       background-color : #584C4C !important ;
@@ -64,56 +70,58 @@ export default function TourCharity() {
             <div className="container">
                <Formik
                   initialValues={{
-                     judulDonasi: "",
+                     judul: "",
                      kategori: "",
-                     namaPendonasi: "",
-                     namaOrganisasi: "",
+                     nama: "",
+                     organisasi: "",
                      email: "",
-                     nominalDonasi: "",
+                     nominal: "",
                      deskripsi: "",
-                     startDate: "",
-                     endDate: "",
-                     urlKarya: "",
+                     waktu_start: "",
+                     waktu_end: "",
+                     url: "",
+                     status: "waiting",
                   }}
                   validate={(values) => {
                      const errors = {};
-                     if (values.judulDonasi === "") {
-                        errors.judulDonasi = "Requeired"
+                     if (values.judul === "") {
+                        errors.judul = "Requeired"
                      }
                      if (values.kategori === "") {
                         errors.kategori = "Requeired"
                      }
-                     if (values.namaPendonasi === "") {
-                        errors.namaPendonasi = "Requeired"
+                     if (values.nama === "") {
+                        errors.nama = "Requeired"
                      }
-                     if (values.namaOrganisasi === "") {
-                        errors.namaOrganisasi = "Requeired"
+                     if (values.organisasi === "") {
+                        errors.organisasi = "Requeired"
                      }
                      if (values.email === "") {
                         errors.email = "Requeired"
                      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
                         errors.email = "Invalid email address";
                      }
-                     if(values.nominalDonasi < 2000000){
-                        errors.nominalDonasi = "Minimum Donasi Rp 2.000.000"
+                     if(values.nominal < 2000000){
+                        errors.nominal = "Minimum Donasi Rp 2.000.000"
                      }
                      if(values.deskripsi === ""){
                         errors.deskripsi = "Required"
                      }
-                     if (values.startDate === "") {
-                        errors.startDate = "Requeired"
+                     if (values.waktu_start === "") {
+                        errors.waktu_start = "Requeired"
                      }
-                     if (values.endDate === "") {
-                        errors.endDate = "Requeired"
+                     if (values.waktu_end === "") {
+                        errors.waktu_end = "Requeired"
                      }
-                     // if (values.urlKarya === "") {
-                     //    errors.urlKarya = "Requeired"
-                     // }
+                     if (values.url === "") {
+                        errors.url = "Requeired"
+                     }
                      return errors;
                   }}
                   onSubmit={(values, { setSubmitting }) => {
-                       alert(JSON.stringify(values, null, 2));
-                       setSubmitting(false);
+                     //   alert(JSON.stringify(values, null, 2));
+                     //   setSubmitting(false);
+                     
                    }}
                >
                   {({
@@ -127,16 +135,16 @@ export default function TourCharity() {
                   }) => {
                      return (
 
-                        <Form className="input" onSubmit={handleSubmit}>
+                        <Form className="input" onSubmit={(event) => dispatch(inputDonasi(values, history, event))}>
                            <Form.Group>
                               <Form.Label>Judul Donasi</Form.Label>
                               <Form.Control
                                  className="FormInput"
                                  type="text"
-                                 name="judulDonasi"
+                                 name="judul"
                                  onChange={handleChange}
                                  onBlur={handleBlur}
-                                 value={values.judulDonasi}
+                                 value={values.judul}
                               />
                               <span
                                  style={{
@@ -169,10 +177,10 @@ export default function TourCharity() {
                               <Form.Control
                                  className="FormInput"
                                  type="text"
-                                 name="namaPendonasi"
+                                 name="nama"
                                  onChange={handleChange}
                                  onBlur={handleBlur}
-                                 value={values.namaPendonasi}
+                                 value={values.nama}
                               />
                               <span
                                  style={{
@@ -190,10 +198,10 @@ export default function TourCharity() {
                               <Form.Control
                                  className="FormInput"
                                  type="text"
-                                 name="namaOrganisasi"
+                                 name="organisasi"
                                  onChange={handleChange}
                                  onBlur={handleBlur}
-                                 value={values.namaOrganisasi}
+                                 value={values.organisasi}
                               />
                               <span
                                  style={{
@@ -232,10 +240,10 @@ export default function TourCharity() {
                               <Form.Control
                                  className="FormInput"
                                  type="number"
-                                 name="nominalDonasi"
+                                 name="nominal"
                                  onChange={handleChange}
                                  onBlur={handleBlur}
-                                 value={values.nominalDonasi}
+                                 value={values.nominal}
                               />
                               <span
                                  style={{
@@ -279,10 +287,10 @@ export default function TourCharity() {
                                     className="FormInput"
                                     type="date"
                                     placeholder="Waktu Mulai"
-                                    name="startDate"
+                                    name="waktu_start"
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.startDate}
+                                    value={values.waktu_start}
                                  />
                                  <span
                                     style={{
@@ -301,10 +309,10 @@ export default function TourCharity() {
                                     className="FormInput"
                                     type="date"
                                     placeholder="Waktu Selesai"
-                                    name="endDate"
+                                    name="waktu_end"
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.endDate}
+                                    value={values.waktu_end}
                                  />
                                  <span
                                     style={{
@@ -323,7 +331,7 @@ export default function TourCharity() {
                               <Form.Control
                                  className="FormInput"
                                  type="url"
-                                 name="urlKarya"
+                                 name="url"
                                  onChange={handleChange}
                                  onBlur={handleBlur}
                                  value={values.urlKarya}

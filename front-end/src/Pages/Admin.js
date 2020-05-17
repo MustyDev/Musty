@@ -18,7 +18,7 @@ function Admin(props) {
 
       let newData = {
         id: id,
-        status: "approve"
+        status: "waiting",
       }
       props.putDataEdit(newData, id)
 
@@ -57,7 +57,7 @@ function Admin(props) {
           </thead>
           <tbody>
             {props.data.map((item, index) => {
-              if (item.Status === "waiting")
+              if (item.Status === "")
                 return (
                   <tr key={item.ID}>
                     <td>{index + 1}</td>
