@@ -44,9 +44,6 @@ function App() {
           <Route path="/details-charity">
             <DetailsCharity />
           </Route>
-          <Route path="/donate">
-            <Donate />
-          </Route>
         </Switch>
       </Router>
       <Footer />

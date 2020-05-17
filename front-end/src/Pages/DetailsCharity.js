@@ -1,12 +1,15 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import styled from "styled-components";
-import { connect } from 'react-redux'
-import { getDetailDonasi } from '../Action/DetailAction'
+import { connect } from "react-redux";
+import { getDetailDonasi } from "../Action/DetailAction";
 import { Jumbotron, ProgressBar } from "react-bootstrap";
 import Donate from "../Components/Donate";
 
+export default function DetailsCharity(props) {
+  useEffect(() => {
+    props.getDetailDonasi();
+  }, []);
 
-export default function DetailsCharity() {
   const StyleDiv = styled.div`
     .Jumbo {
       background-color: #584c4c !important ;
@@ -79,7 +82,7 @@ export default function DetailsCharity() {
     <Fragment>
       <StyleDiv>
         <Jumbotron className="Jumbo">
-          <h1 className="Title">Galang Dana </h1>
+          <h1 className="Title">{data.Nama} </h1>
         </Jumbotron>
       </StyleDiv>
       <StyleCard>
@@ -144,17 +147,17 @@ export default function DetailsCharity() {
               quam. Nam tortor est, faucibus at dolor id, blandit venenatis leo.
               Praesent euismod tempus libero et accumsan. Nunc ultrices sit amet
               urna sed euismod. Pellentesque finibus ipsum non mi sodales, vel
-              ullamcorper ipsum pharetra. Praesent nec pharetra neque, elementum
-              tempus purus. Sed fringilla, libero blandit elementum viverra,
-              nibh urna faucibus nisl, in placerat ex dolor eu nulla.Duis ornare
-              massa est, condimentum convallis lacus feugiat a. Cras elementum
-              nec augue id condimentum. Morbi iaculis urna sit amet sapien
-              egestas, sit amet condimentum tellus cursus. Quisque ipsum metus,
-              hendrerit vitae dolor ac, blandit imperdiet ligula. Donec
-              vestibulum sem justo, pulvinar laoreet tellus cursus ut. Quisque
-              dui diam, volutpat at mauris sit amet, finibus suscipit ipsum.
-              Donec commodo tincidunt posuere. Donec eleifend consectetur lorem,
-              eu sodales dolor pharetra vitae.
+              ullamcorper ipsum the macaron macaron haretra. Praesent nec
+              pharetra neque, elementum tempus purus. Sed fringilla, libero
+              blandit elementum viverra, nibh urna faucibus nisl, in placerat ex
+              dolor eu nulla.Duis ornare massa est, condimentum convallis lacus
+              feugiat a. Cras elementum nec augue id condimentum. Morbi iaculis
+              urna sit amet sapien egestas, sit amet condimentum tellus cursus.
+              Quisque ipsum metus, hendrerit vitae dolor ac, blandit imperdiet
+              ligula. Donec vestibulum sem justo, pulvinar laoreet tellus cursus
+              ut. Quisque dui diam, volutpat at mauris sit amet, finibus
+              suscipit ipsum. Donec commodo tincidunt posuere. Donec eleifend
+              consectetur lorem, eu sodales dolor pharetra vitae.
             </p>
           </div>
           <div className="container col-md-3" id="daftar-donatur">
