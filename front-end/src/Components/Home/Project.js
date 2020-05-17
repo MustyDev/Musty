@@ -8,11 +8,19 @@ function Project() {
   const now = 50;
   const progressInstance = <ProgressBar now={now} label={`${now}%`} />;
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(
+    []
+    // judul: "",
+    // nama: "",
+    // nominal: "",
+    // url: "",
+    // waktu_start: "",
+    // waktu_end: "",
+  );
 
   useEffect(() => {
     axios
-      .get("https://5ebcabd3ec34e900161919bb.mockapi.io/home/galangdana")
+      .get("https://musty-api.herokuapp.com/donasi")
       .then((res) => setData(res.data[0]))
       .catch(console.error);
   }, []);
@@ -28,12 +36,12 @@ function Project() {
           <CardDeck className="card-deck">
             <Card className="card-galangdana">
               <Link to="/details-charity">
-                <Card.Img className="card-img" variant="top" src={data.image} />
+                <Card.Img className="card-img" variant="top" src={data.url} />
                 <Card.Body>
                   <h4 className="text-dark">{data.judul}</h4>
-                  <span className="text-muted">Oleh ({data.nama})</span>
+                  <span className="text-muted">({data.nama})</span>
                   <p>{progressInstance}</p>
-                  <h5 className="text-dark">{data.total}</h5>
+                  <h5 className="text-dark">{data.nominal}</h5>
                 </Card.Body>
                 <Card.Footer>
                   <small className="text-dark">
