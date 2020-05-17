@@ -10,7 +10,7 @@ const Login = () => {
       <div>
         <Jumbotron className="jumbotronLogin darkenImage">
           <Container>
-            <h1>Login</h1>
+            <h1>Masuk</h1>
           </Container>
         </Jumbotron>
       </div>
@@ -18,11 +18,11 @@ const Login = () => {
         <Container className="containerLogin">
           <Form className="shadow p-3 mb-5 bg-white rounded">
             <Form.Group>
-              <Form.Label>Email Address</Form.Label>
+              <Form.Label>Alamat Email</Form.Label>
               <Form.Control
                 type="email"
                 name="email"
-                placeholder="Enter email"
+                placeholder="Masukan email anda"
                 required
               />
             </Form.Group>
@@ -31,7 +31,7 @@ const Login = () => {
               <Form.Control
                 type="password"
                 name="password"
-                placeholder="Password"
+                placeholder="Masukan password anda"
                 required
               />
             </Form.Group>

@@ -89,11 +89,11 @@ function MenuBar() {
               <Form inline>
                 <FormControl
                   type="text"
-                  placeholder="Search"
+                  placeholder="Cari Donasi"
                   className="mr-sm-2"
                 />
                 <Button className="buttonSearch" variant="primary">
-                  Search
+                  Cari Donasi
                 </Button>
               </Form>
             </Nav>
