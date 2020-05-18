@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { Formik } from 'formik'
-import { Jumbotron, Button, Form } from 'react-bootstrap'
+import { Jumbotron, Button, Form, InputGroup } from 'react-bootstrap'
 
 
 export default function TourCharity() {
@@ -28,6 +28,10 @@ export default function TourCharity() {
       }
       .FormInput{
          margin-bottom : 25px;
+         background-color : #E5E5E5 !important;
+      }
+      #FormInput{
+         margin-bottom : 0px;
          background-color : #E5E5E5 !important;
       }
       #formDate{
@@ -82,10 +86,10 @@ export default function TourCharity() {
                      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
                         errors.email = "Invalid email address";
                      }
-                     if(values.nominalDonasi < 2000000){
+                     if (values.nominalDonasi < 2000000) {
                         errors.nominalDonasi = "Minimum Donasi Rp 2.000.000"
                      }
-                     if(values.deskripsi === ""){
+                     if (values.deskripsi === "") {
                         errors.deskripsi = "Required"
                      }
                      if (values.startDate === "") {
@@ -97,12 +101,15 @@ export default function TourCharity() {
                      if (values.urlKarya === "") {
                         errors.urlKarya = "Requeired"
                      }
+                     if (values.kategori === "Pilih Category"){
+                        errors.kategori = "Pilih Kategory"
+                     }
                      return errors;
                   }}
                   onSubmit={(values, { setSubmitting }) => {
-                       alert(JSON.stringify(values, null, 2));
-                       setSubmitting(false);
-                   }}
+                     alert(JSON.stringify(values, null, 2));
+                     setSubmitting(false);
+                  }}
                >
                   {({
                      values,
@@ -151,6 +158,16 @@ export default function TourCharity() {
                                  <option>Alat Musik</option>
                                  <option>Album</option>
                               </Form.Control>
+                              <span
+                                 style={{
+                                    color: "red",
+                                    fontStyle: "bold",
+                                 }}
+                              >
+                                 {errors.kategori &&
+                                    touched.kategori &&
+                                    errors.kategori}
+                              </span>
                            </Form.Group>
                            <Form.Group >
                               <Form.Label>Nama Pendonasi</Form.Label>
@@ -217,24 +234,30 @@ export default function TourCharity() {
                            </Form.Group>
                            <Form.Group >
                               <Form.Label>Nominal Donasi</Form.Label>
-                              <Form.Control
-                                 className="FormInput"
-                                 type="number"
-                                 name="nominalDonasi"
-                                 onChange={handleChange}
-                                 onBlur={handleBlur}
-                                 value={values.nominalDonasi}
-                              />
+                              <InputGroup>
+                                 <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroupPrepend">Rp</InputGroup.Text>
+                                 </InputGroup.Prepend>
+                                 <Form.Control
+                                    id="FormInput"
+                                    type="number"
+                                    name="nominalDonasi"
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.nominalDonasi}
+                                 />
+                               
+                              </InputGroup>
                               <span
-                                 style={{
-                                    color: "red",
-                                    fontStyle: "bold",
-                                 }}
-                              >
-                                 {errors.nominalDonasi &&
-                                    touched.nominalDonasi &&
-                                    errors.nominalDonasi}
-                              </span>
+                                    style={{
+                                       color: "red",
+                                       fontStyle: "bold",
+                                    }}
+                                 >
+                                    {errors.nominalDonasi &&
+                                       touched.nominalDonasi &&
+                                       errors.nominalDonasi}
+                                 </span>
                            </Form.Group>
                            <Form.Group controlId="exampleForm.ControlTextarea1">
                               <Form.Label>Deskripsi</Form.Label>

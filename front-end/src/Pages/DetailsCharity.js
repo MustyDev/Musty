@@ -102,7 +102,7 @@ export default function DetailsCharity() {
                            </div>
                            <p className="card-date"><small className="text-muted">1 Januari 2020 - 1 Januari</small></p>
                            <div id="controlButton">
-                              <button type="button" className="btn btn-dark" style={{ color: "white" }}>Donasi</button>
+                              <Button variant="primary" type="submit">Donasi</Button>
                            </div>
                         </div>
                      </div>
@@ -116,8 +116,8 @@ export default function DetailsCharity() {
                </div>
                <div className="container col-md-3" id="daftar-donatur">
                   <h3>Donatur</h3>
-                  <div className="card" id="card-donatur" style={{width:"50%", height : "40%"}}>
-                     <img className="card-img-top" src="https://img.icons8.com/bubbles/200/000000/bartender-male.png"  />
+                  <div className="card" id="card-donatur" style={{ width: "50%", height: "40%" }}>
+                     <img className="card-img-top" src="https://img.icons8.com/bubbles/200/000000/bartender-male.png" />
                      <div class="card-img-overlay">
                         <h6 class="card-title">John Doe</h6>
                      </div>
