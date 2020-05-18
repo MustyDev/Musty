@@ -5,6 +5,7 @@ import "../App.css";
 import Images from "../Images/Logo-Musty.png";
 import dani from "../Images/dani.jpg";
 import wahid from "../Images/Wahid.jpg";
+import enggar from "../Images/enggar.jpeg"
 
 const About = () => {
   const StyleDiv = styled.div`
@@ -79,7 +80,7 @@ const About = () => {
                 </div>
                 <div className="col text-center">
                   <img
-                    src="{https://image.flaticon.com/icons/svg/2918/2918921.svg}"
+                    src={enggar}
                     className="profile-team"
                   />
                   <h4>
