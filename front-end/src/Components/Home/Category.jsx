@@ -11,7 +11,7 @@ function Category() {
     <div>
       <Row className="row-category">
         <Card className="card-category">
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/konser" style={{ textDecoration: "none" }}>
             <Card.Body>
               <center>
                 <IoMdMicrophone className="icon" />
@@ -22,7 +22,7 @@ function Category() {
         </Card>
 
         <Card className="card-category">
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/album" style={{ textDecoration: "none" }}>
             <Card.Body>
               <center>
                 <MdAlbum className="icon" />
@@ -33,7 +33,7 @@ function Category() {
         </Card>
 
         <Card className="card-category">
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/alatmusik" style={{ textDecoration: "none" }}>
             <Card.Body>
               <center>
                 <FaGuitar className="icon" />

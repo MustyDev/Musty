@@ -2,14 +2,7 @@ import React from "react";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import {
-  Container,
-  Jumbotron,
-  Button,
-  Nav,
-  Navbar,
-  Row,
-} from "react-bootstrap";
+import { Container, Jumbotron, Button, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "../Assets/Register/Register.scss";
