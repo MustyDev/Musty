@@ -30,12 +30,12 @@ function Project() {
           <CardDeck className="card-deck">
             <Card className="card-galangdana">
               <Link to="/details-charity">
-                <Card.Img className="card-img" variant="top" src={data.url} />
+                <Card.Img className="card-img" variant="top" src={data.Url} />
                 <Card.Body>
-                  <h4 className="text-dark">{data.judul}</h4>
-                  <span className="text-muted">({data.nama})</span>
+                  <h4 className="text-dark">{data.Judul}</h4>
+                  <span className="text-muted">({data.Nama})</span>
                   <p>{progressInstance}</p>
-                  <h5 className="text-dark">{data.nominal}</h5>
+                  <h5 className="text-dark">{data.Nominal}</h5>
                 </Card.Body>
                 <Card.Footer>
                   <small className="text-dark">

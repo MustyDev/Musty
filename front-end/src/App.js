@@ -14,8 +14,7 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import TourCharity from "./Pages/TourCharity";
-import Donate from "./Components/Detail/Donate";
-import PrivateRoute from './PrivateRoutes'
+import PrivateRoute from "./PrivateRoutes";
 
 function App() {
   return (
@@ -28,7 +27,7 @@ function App() {
             <Home />
           </Route>
           <PrivateRoute path="/form-tourcharity" component={TourCharity} />
-          
+
           <PrivateRoute path="/admin" component={Admin} />
           <Route path="/about">
             <About />
