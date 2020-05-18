@@ -14,26 +14,24 @@ function Admin(props) {
     props.getDataDana();
   }, []);
 
-  const handleClickStatus = (id) => {
+  const handleClickStatus = (item) => {
+    let newData = {
+      status: "approve",
+    };
+    console.log("new", newData);
 
-      let newData = {
-        id: id,
-        status: "approve                                                                                                                                                                                                                                                                                                                                                                                                                                                        ",
-      }
-      props.putDataEdit(newData, id)
-
-      console.log(newData)
+    props.putDataEdit(newData, item.ID);
   };
 
-  const handleClickCategory = (value) =>{
-    console.log(value)
-      let filter = {
-        where : {
-          Status: "approve",
-        }
-      }
-      props.getDataCategory(filter)
-  }
+  const handleClickCategory = (value) => {
+    console.log(value);
+    let filter = {
+      where: {
+        Status: "approve",
+      },
+    };
+    props.getDataCategory(filter);
+  };
 
   return (
     <div>
@@ -57,31 +55,32 @@ function Admin(props) {
           </thead>
           <tbody>
             {props.data.map((item, index) => {
-              if (item.Status === "")
-                return (
-                  <tr key={item.ID}>
-                    <td>{index + 1}</td>
-                    <td>{item.Nama}</td>
-                    <td>{item.Judul}</td>
-                    <td>{item.Deskripsi}</td>
-                    <td>
-                      <Badge variant="warning">{item.Status}</Badge>
-                    </td>
-                    <td>
-                      <Button
-                        variant="primary"
-                        size="sm"
-                        onClick={() => {
-                          handleClickStatus(item.ID);
-                        }}
-                        value={"Approve"}
-                      >
-                        Approve
-                      </Button>{" "}
-                    </td>
-                  </tr>
-                );
-
+              {
+                /* if (item.Status === "") */
+              }
+              return (
+                <tr key={item.ID}>
+                  <td>{index + 1}</td>
+                  <td>{item.Nama}</td>
+                  <td>{item.Judul}</td>
+                  <td>{item.Deskripsi}</td>
+                  <td>
+                    <Badge variant="warning">{item.Status}</Badge>
+                  </td>
+                  <td>
+                    <Button
+                      variant="primary"
+                      size="sm"
+                      onClick={() => {
+                        handleClickStatus(item);
+                      }}
+                      value={"Approve"}
+                    >
+                      Approve
+                    </Button>{" "}
+                  </td>
+                </tr>
+              );
             })}
           </tbody>
         </Table>
@@ -96,13 +95,11 @@ const mapStateToProps = (props) => {
   };
 };
 
-
-const mapDispatchToProps = (dispatch) => { 
+const mapDispatchToProps = (dispatch) => {
   return {
     getDataDana: () => dispatch(getDataDana()),
-    putDataEdit: (data, id) => 
-      dispatch(putDataEdit(data, id)),
-  }
+    putDataEdit: (data, id) => dispatch(putDataEdit(data, id)),
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Admin);
