@@ -1,4 +1,4 @@
-import { GET_DANA, GET_DANA_SUCCESS, GET_DANA_FAILED } from '../Action/AdminAction'
+import { GET_DANA, GET_DANA_SUCCESS, GET_DANA_FAILED, PUT_DANA_EDIT} from '../Action/AdminAction'
 
 const initialState = {
     dana: [],
@@ -20,6 +20,11 @@ const getDana = (state = initialState, action) => {
             return{
                 ...state,
                 error: action.error
+            }
+        case PUT_DANA_EDIT:
+            return{
+                ...state,
+                dana: action.data
             }
         default:
             return state

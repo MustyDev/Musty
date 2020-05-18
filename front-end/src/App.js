@@ -4,17 +4,18 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import Footer from "./Components/Footbar";
+import MenuBar from "./Components/Menubar";
+import Nav from "./Components/Navbar";
 import About from "./Pages/About";
 import Admin from "./Pages/Admin";
+import DetailsCharity from "./Pages/DetailsCharity";
+import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import TourCharity from "./Pages/TourCharity";
-import Home from "./Pages/Home";
-import Nav from "./Components/Navbar";
-import Footer from "./Components/Footbar";
-import MenuBar from "./Components/Menubar";
-import DetailsCharity from "./Pages/DetailsCharity";
-import Donate from "./Pages/Donate";
+import Donate from "./Components/Detail/Donate";
+import PrivateRoute from './PrivateRoutes'
 
 function App() {
   return (
@@ -26,12 +27,9 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/form-tourcharity">
-            <TourCharity />
-          </Route>
-          <Route path="/admin">
-            <Admin />
-          </Route>
+          <PrivateRoute path="/form-tourcharity" component={TourCharity} />
+          
+          <PrivateRoute path="/admin" component={Admin} />
           <Route path="/about">
             <About />
           </Route>
@@ -43,9 +41,6 @@ function App() {
           </Route>
           <Route path="/details-charity">
             <DetailsCharity />
-          </Route>
-          <Route path="/donate">
-            <Donate />
           </Route>
         </Switch>
       </Router>

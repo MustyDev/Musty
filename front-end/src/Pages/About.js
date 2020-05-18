@@ -19,8 +19,8 @@ const About = () => {
   return (
     <Fragment>
       <StyleDiv>
-        <Jumbotron className="Jumbo">
-          <h1 className="Title">About us</h1>
+        <Jumbotron className="jumboroton-about">
+          <h1 className="Title">TENTANG KAMI</h1>
         </Jumbotron>
       </StyleDiv>
       <section className="container mt-3  ">
@@ -32,10 +32,10 @@ const About = () => {
             <h1>We take care of music</h1>
             <hr />
             <h3>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla
-              facilisi etiam dignissim diam quis enim. Scelerisque eleifend
-              donec pretium vulputate sapi.
+              Musty (Music Charity) adalah paltform website untuk berdonasi dan
+              menggalang dana secara online. Misi kami adalah untuk membantu
+              para musisi indonesia agar tetap berkarya dan menjadi media bagi
+              para penggemar untuk membantu musisi idolanya.
             </h3>
           </div>
         </div>
@@ -46,44 +46,60 @@ const About = () => {
           <div className="row">
             <div className="col py-5">
               <h2 className="text-center">
-                <strong>OUR FULL-STACK DEVELOPER TEAM</strong>
+                <strong>DEVELOPER TEAM</strong>
               </h2>
               <hr />
               <div className="row mt-5">
                 <div className="col text-center">
-                  <img src alt="" />
+                  <img
+                    src="https://image.flaticon.com/icons/svg/2918/2918921.svg"
+                    className="profile-team"
+                  />
+
                   <h4>
                     <strong>Wahid</strong>
                   </h4>
-                  <p className="text-secondary">Team lead</p>
+                  <p className="text-secondary">Fullstak-Developer</p>
                 </div>
                 <div className="col text-center">
-                  <img src alt="" />
+                  <img
+                    src="https://image.flaticon.com/icons/svg/2918/2918921.svg"
+                    className="profile-team"
+                  />
                   <h4>
                     <strong>Hadyd</strong>
                   </h4>
-                  <p className="text-secondary">Web Designer</p>
+                  <p className="text-secondary">Frontend-Developer</p>
                 </div>
                 <div className="col text-center">
-                  <img src alt="" />
+                  <img
+                    src="https://image.flaticon.com/icons/svg/2918/2918921.svg"
+                    className="profile-team"
+                  />
                   <h4>
                     <strong>Zakiy Dani</strong>
                   </h4>
-                  <p className="text-secondary">Software Engineer</p>
+                  <p className="text-secondary">Frontend-Developer</p>
                 </div>
                 <div className="col text-center">
-                  <img src alt="" />
+                  <img
+                    src="https://image.flaticon.com/icons/svg/2918/2918921.svg"
+                    className="profile-team"
+                  />
                   <h4>
                     <strong>Enggar</strong>
                   </h4>
-                  <p className="text-secondary">Software Engineer</p>
+                  <p className="text-secondary">Backend-Developer</p>
                 </div>
                 <div className="col text-center">
-                  <img src alt="" />
+                  <img
+                    src="https://image.flaticon.com/icons/svg/2918/2918921.svg"
+                    className="profile-team"
+                  />
                   <h4>
                     <strong>Bayu</strong>
                   </h4>
-                  <p className="text-secondary">Software Engineer</p>
+                  <p className="text-secondary">Backend-Developer</p>
                 </div>
               </div>
             </div>

@@ -1,107 +1,61 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { Container, Jumbotron, Form, Button } from "react-bootstrap";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import {
+  Container,
+  Jumbotron,
+  Button,
+  Nav,
+  Navbar,
+  Row,
+} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "../Assets/Register/Register.scss";
 
 import { withRouter } from "react-router-dom";
+import RegisterMusisi from "../Components/Register/RegisterMusisi";
+import RegisterUser from "../Components/Register/RegisterUser";
 
-const Register = (props) => {
-  // console.log("props", props);
-
-  // // Untuk menyimpan State User
-  // const [user, setUser] = useState({
-  //   name: "",
-  //   email: "",
-  //   no: "",
-  //   password: "",
-  // });
-
-  // // Handle Change pada Input
-  // const handleChange = (event) => {
-  //   setUser({
-  //     ...user,
-  //     [event.target.name]: event.target.value,
-  //   });
-  // };
-
-  // // Handle Add Register pada Button Register
-  // const handleAddUser = (event) => {
-  //   event.preventDefault();
-  //   localStorage.setItem("user", JSON.stringify(user));
-  //   props.history.push("/login");
-  //   if (user) return alert("Register berhasil!");
-  //   if (!user) return alert("Harap diisi");
-  // };
-
+const Register = () => {
   return (
     <div>
-      <div>
-        <Jumbotron className="jumbotronRegister darkenImage">
-          <Container>
-            <h1>Register Account</h1>
-          </Container>
-        </Jumbotron>
-      </div>
-      <div>
-        <Container className="containerRegister">
-          <Form className="shadow p-3 mb-5 bg-white rounded">
-            <Form.Group>
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                type="text"
-                name="name"
-                // value={user.name}
-                // onChange={handleChange}
-                placeholder="Enter your Name"
-                required
-              />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Email Address</Form.Label>
-              <Form.Control
-                type="email"
-                name="email"
-                // value={user.email}
-                // onChange={handleChange}
-                placeholder="Enter email"
-                required
-              />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>No. Handphone</Form.Label>
-              <Form.Control
-                type="number"
-                name="no"
-                // value={user.no}
-                // onChange={handleChange}
-                placeholder="Enter your Phone Number"
-                required
-              />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                name="password"
-                // value={user.password}
-                // onChange={handleChange}
-                placeholder="Password"
-                required
-              />
-            </Form.Group>
-            <Button
-              className="buttonRegister px-4"
-              variant="primary"
-              // onClick={handleAddUser}
-              type="submit"
-            >
-              Register
+      <Router>
+        <div>
+          <Jumbotron className="jumbotronRegister darkenImage">
+            <Container>
+              <h1>Daftar</h1>
+            </Container>
+          </Jumbotron>
+        </div>
+
+        <div>
+          <Row className="row-register">
+            <Button className="buttonRegister1">
+              <Link to="/register" className="buttonRegister">
+                Daftar sebagai Musisi
+              </Link>
             </Button>
-          </Form>
-        </Container>
-      </div>
+            <Button className="buttonRegister2">
+              <Link to="/register-user" className="buttonRegister">
+                Daftar sebagai Donatur
+              </Link>
+            </Button>
+          </Row>
+
+          <Container className="containerRegister">
+            <Switch>
+              <Route exact path="/register">
+                <RegisterMusisi />
+              </Route>
+              <Route path="/register-user">
+                <RegisterUser />
+              </Route>
+            </Switch>
+          </Container>
+        </div>
+      </Router>
     </div>
   );
 };

@@ -45,16 +45,14 @@ const Nav = () => {
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
             <GrNotes />
-            <Link to="/donate" className="text-donasi">
-              Mulai Donasi
+            <Link to="/form-tourcharity" className="text-donasi">
+              Buat Donasi
             </Link>
-            <FiLogIn />
-            <Link to="/login" className="text">
-              Login
+            <Link to="/login" className="text text-muted">
+              Masuk
             </Link>
-            <text>/</text>
             <Link to="/register" className="text">
-              Register
+              Daftar
             </Link>
           </Navbar.Text>
         </Navbar.Collapse>

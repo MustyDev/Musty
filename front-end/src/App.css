@@ -2,6 +2,9 @@
   #1f98e5
   #dc23d4
 } */
+.form-control {
+  border-color: #1f98e5;
+}
 .buttonSearch {
   background-color: #dc23d4;
   border-color: #dc23d4;
@@ -20,13 +23,18 @@
   font-weight: bold;
   text-decoration: none;
 }
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
 .right-icon {
   margin: 30px;
 }
 .text {
   margin: 5px;
 }
-
+.jumbotron-fluid {
+  background-color: #1f98e5;
+}
 .text-donasi {
   padding-right: 40px;
   margin: 5px;
@@ -35,7 +43,8 @@
 footer {
   padding: 15px;
   color: white;
-  background-color: rgb(43, 45, 59);
+  background-color: #1f98e5;
+  /* background-color: rgb(43, 45, 59); */
   text-align: center;
   font-weight: bold;
   margin-top: 20px;
@@ -58,7 +67,6 @@ footer {
 
 .card-category :hover {
   background-color: #1f98e5;
-  animation: f;
 }
 .card-category :hover .icon {
   color: white;
@@ -70,7 +78,11 @@ footer {
 }
 
 .text {
-  color: black;
+  color: #1f98e5;
+}
+
+.progress-bar-project {
+  margin-top: 10px;
 }
 
 .container-category {
@@ -78,8 +90,14 @@ footer {
   position: relative;
   text-align: center;
 }
+
 .judul {
   margin-top: 20px;
+}
+
+.text-title1 {
+  font-weight: bolder;
+  color: white;
 }
 
 .text-title {
@@ -103,6 +121,9 @@ footer {
 
 .link-category {
   color: black;
+  text-transform: uppercase;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .caption-carousel {
@@ -119,20 +140,34 @@ footer {
   font-size: 30px;
 }
 
-.title-description {
-  color: #777777;
+.title-description1 {
+  color: white;
   text-align: center;
 }
-
+.title-description {
+  color: grey;
+  text-align: center;
+}
 .card-deck {
-margin-top: 20px;
-margin-left: 20px;
-margin-right: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.progress-bar {
+  background-color: lightgray;
+  /* margin-top: 10px; */
+}
+
+.progress-bar {
+  background-color: #1f98e5;
 }
 
 .button-charity {
   text-align: center;
-  float:center;
+  float: center;
+  background-color: #1f98e5;
+  border-color: #1f98e5;
 }
 
 .profile-pic {
@@ -144,7 +179,56 @@ margin-right: 20px;
 }
 
 .total-project {
- background-color: brown;
-   margin-top: 30px;
- 
- }
+  background-color: #1f98e5;
+  margin-top: 30px;
+}
+
+.card-galangdana {
+  box-shadow: 0px 3px 3px 2px #dddddd;
+  border-radius: 20px;
+}
+
+.card-galangdana img {
+  border-radius: 20px 20px 0px 0px;
+}
+.button-charity {
+  background-color: #dc23d4;
+  border-color: #dc23d4;
+}
+.card-galangdana :hover {
+  text-decoration: none;
+}
+
+.jumboroton-about {
+  background-image: url(https://images.pexels.com/photos/736355/pexels-photo-736355.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+
+.profile-team {
+  height: 150px;
+  width: 150px;
+}
+
+/* Responsive Mobile Home */
+@media only screen and (max-width: 600px) {
+  .text-title1 {
+    font-size: 27px;
+  }
+  .text-title {
+    font-size: 27px;
+  }
+  .title-description {
+    font-size: 18px;
+  }
+  .title-carousel {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: -50px;
+    text-align: left;
+  }
+  .deskripsi-carousel {
+    font-size: 20px;
+  }
+}
