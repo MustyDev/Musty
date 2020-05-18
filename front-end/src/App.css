@@ -210,3 +210,25 @@ footer {
   height: 150px;
   width: 150px;
 }
+
+/* Responsive Mobile Home */
+@media only screen and (max-width: 600px) {
+  .text-title1 {
+    font-size: 27px;
+  }
+  .text-title {
+    font-size: 27px;
+  }
+  .title-description {
+    font-size: 18px;
+  }
+  .title-carousel {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: -50px;
+    text-align: left;
+  }
+  .deskripsi-carousel {
+    font-size: 20px;
+  }
+}

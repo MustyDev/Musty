@@ -13,8 +13,9 @@ h1 {
 }
 
 .containerRegister {
-  padding-left: 200px;
-  padding-right: 200px;
+  // padding-left: 200px;
+  // padding-right: 200px;
+  width: 60%;
 }
 
 .darkenImage {
@@ -47,6 +48,7 @@ h1 {
 .buttonRegister1 {
   display: flex;
   justify-content: space-evenly;
+  margin-right: 5px;
   // float: center;
   // margin-right: 30px;
   // margin-bottom: 50px;
@@ -55,7 +57,13 @@ h1 {
 .buttonRegister2 {
   display: flex;
   justify-content: space-evenly;
+  margin-left: 5px;
   // float: center;
   // margin-left: 30px;
   // position: absolute;
+}
+
+.row-register {
+  justify-content: center;
+  margin-bottom: 15px;
 }
