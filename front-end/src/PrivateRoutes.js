@@ -1,27 +1,20 @@
-import React from "react";
-import { connect } from "react-redux";
-import { Route, Redirect, withRouter } from "react-router-dom";
+import React from 'react';
 
-const PrivateRoute = ({ component, auth, ...rest }) => {
-  let ComponentToRender = component;
+import { Route, Redirect } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 
-  return (
-    <Route
-      {...rest}
-      render={props =>
-        localStorage.getItem("token")
-          ? console.log("Trying to render component") || (
-              <ComponentToRender {...props} />
-            )
-          : console.log("Redirected") || (
-              <Redirect
-                to={{ pathname: "/", state: { from: props.location } }}
-              />
-            )
-      }
-    />
-  );
+const PrivateRoute = ({component: Component, ...rest}) => {
+  const isLogged = useSelector((state) => state.loginState.isLogged)
+    return (
+
+        // Show the component only when the user is logged in
+        // Otherwise, redirect the user to /signin page
+        <Route {...rest} render={props => (
+            isLogged === true ?
+                <Component {...props} />
+            : <Redirect to="/login" />
+        )} />
+    );
 };
 
-const mapStateToProps = (state, ownProps) => ({ auth: state.auth });
-export default withRouter(connect(mapStateToProps)(PrivateRoute));
+export default PrivateRoute;

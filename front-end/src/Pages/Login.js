@@ -4,13 +4,17 @@ import { useDispatch, useSelector } from 'react-redux'
 import { login } from '../Action/LoginAction'
 import { Container, Jumbotron, Form, Button } from "react-bootstrap"
 
+
 import "../Assets/Login/Login.scss";
 
 const Login = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   
-  const isLogged = useSelector((state) => state.loginState.users)
+  const isLogged = useSelector((state) => state.loginState.isLogged)
+  console.log(isLogged)
+  
+
   const [loginState, setLoginState] = useState({
     Email: "",
     Password: "",
