@@ -6,17 +6,11 @@ import "../../App.css";
 
 function Project() {
   const now = 50;
-  const progressInstance = <ProgressBar now={now} label={`${now}%`} />;
-
-  const [data, setData] = useState(
-    []
-    // judul: "",
-    // nama: "",
-    // nominal: "",
-    // url: "",
-    // waktu_start: "",
-    // waktu_end: "",
+  const progressInstance = (
+    <ProgressBar now={now} label={`${now}%`} className="progress-bar-project" />
   );
+
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     axios

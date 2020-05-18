@@ -45,11 +45,17 @@ h1 {
   color: white;
 }
 .buttonRegister1 {
-  float: center;
-  margin-left: 200px;
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  // float: center;
+  // margin-right: 30px;
+  // margin-bottom: 50px;
+  // position: relative;
 }
 .buttonRegister2 {
-  float: right;
-  margin-right: 180px;
+  display: flex;
+  justify-content: space-evenly;
+  // float: center;
+  // margin-left: 30px;
+  // position: absolute;
 }
