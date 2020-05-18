@@ -13,7 +13,7 @@ function RegisterUser() {
     Username: "",
     Email: "",
     Password: "",
-    Role: "2",
+    Role: "0",
   })
 
   const handleChange = (field, value) => {

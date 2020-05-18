@@ -7,22 +7,18 @@ import axios from "axios";
 import { Card, CardDeck, ProgressBar, Container } from "react-bootstrap";
 import { connect } from 'react-redux'
 import "../../App.css";
-import { getDataDonasi } from '../../Action/HomeAction'
+import { getDataKonser } from '../../Action/CategoryAction'
 
-function Project(props) {
-  const now = 50;
-  const progressInstance = (
-    <ProgressBar now={now} label={`${now}%`} className="progress-bar-project" />
-  );
+function Konser(props) {
 
   useEffect(() => {
-    props.getDataDonasi()
+    props.getDataKonser()
   }, []);
-  const approve = props.donasi.filter(donate => donate.Status === "approve")
+  const approve = props.konser.filter(konser => konser.Status === "approve")
   return (
     <div>
       <Container>
-        <h1 className="text-title">Mulai Donasi</h1>
+        <h1 className="text-title">Konser</h1>
         <h5 className="title-description">
           Mulai Donasi untuk Musisi Idola Kamu.
         </h5>
@@ -37,7 +33,7 @@ function Project(props) {
                       <h4 className="text-dark">{items.Judul}</h4>
                       <span className="text-muted">{items.Nama}</span>
                       <p><ProgressBar now={100 / items.Nominal * 0} 
-                            label={100 / items.Nominal * 0, '%'} className="progress-bar-project" />
+                            label={100 / items.Nominal * 0,`%`} className="progress-bar-project" />
                       </p>
                       <h5 className="text-dark">{items.Nominal}</h5>
                     </Card.Body>
@@ -84,14 +80,14 @@ function Project(props) {
 
 const mapStateToProps = (props) => {
   return {
-    donasi: props.getDonasi.data
+    konser: props.getCategory.konser
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return{
-    getDataDonasi: () => dispatch(getDataDonasi())
+    getDataKonser: () => dispatch(getDataKonser())
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Project);
+export default connect(mapStateToProps, mapDispatchToProps)(Konser);

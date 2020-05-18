@@ -2,7 +2,7 @@ import React from "react";
 
 import { Navbar } from "react-bootstrap";
 
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import { GrNotes } from "react-icons/gr";
 import { FiInstagram } from "react-icons/fi";
@@ -17,7 +17,14 @@ import jwt from "jwt-decode";
 import "../App.css";
 
 const Nav = () => {
+  const history = useHistory()
   const isLogged = useSelector((state) => state.loginState.isLogged);
+
+  const logOutHandler = e => {
+    history.push('/')
+    localStorage.removeItem("token")
+    window.location.reload(false)
+  }
 
   if (isLogged === false) {
     return (
@@ -77,7 +84,7 @@ const Nav = () => {
                 <Link to="/admin" className="text-donasi">
                   Admin
                 </Link>
-                <Link to="/logout" className="text text-muted">
+                <Link onClick={e=>logOutHandler(e)} className="text text-muted">
                   LogOut
                 </Link>
               </Navbar.Text>
@@ -108,7 +115,7 @@ const Nav = () => {
                 <Link to="/form-tourcharity" className="text-donasi">
                   Buat Donasi
                 </Link>
-                <Link to="/logout" className="text text-muted">
+                <Link onClick={e=>logOutHandler(e)} className="text text-muted">
                   LogOut
                 </Link>
               </Navbar.Text>
@@ -135,7 +142,7 @@ const Nav = () => {
 
             <Navbar.Collapse className="justify-content-end">
               <Navbar.Text>
-                <Link to="/logout" className="text text-muted">
+                <Link onClick={e=>logOutHandler(e)} className="text text-muted">
                   LogOut
                 </Link>
               </Navbar.Text>
