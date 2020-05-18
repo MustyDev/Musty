@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { Jumbotron } from "react-bootstrap";
 import "../App.css";
 import Images from "../Images/Logo-Musty.png";
-import dani from "../Images/dani.jpg";
+import dani from "../Images/dani.jpeg";
 import wahid from "../Images/Wahid.jpg";
-import enggar from "../Images/enggar.jpeg"
+import enggar from "../Images/enggar.jpeg";
 
 const About = () => {
   const StyleDiv = styled.div`
@@ -79,10 +79,7 @@ const About = () => {
                   <p className="text-secondary">Front-End Developer</p>
                 </div>
                 <div className="col text-center">
-                  <img
-                    src={enggar}
-                    className="profile-team"
-                  />
+                  <img src={enggar} className="profile-team" />
                   <h4>
                     <strong>Enggar</strong>
                   </h4>

@@ -212,6 +212,9 @@ footer {
 
 .profile-team {
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
   height: 150px;
   width: 150px;
 }
