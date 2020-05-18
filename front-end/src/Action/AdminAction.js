@@ -44,26 +44,27 @@ export function getDataDana() {
 
 
 export const putDataEdit = (data, id) =>{
-    return (dispatch) => {
+    return function (dispatch){
+        dispatch(getDana())
         axios
             .put(
               `https://musty-api.herokuapp.com/donasi/status/${id}`, 
               queryString.stringify({data})
             )
-            .then(() => dispatch(getDataDana()))
+            .then((result) => dispatch(getDataDana(result.data)))
             .catch(error => dispatch(getDanaFailed(error.massage)))
     }
 }
 
 
-export const getDataCategory = (value) => {
-  return (dispatch) => {
-      axios
-          .get('https://5eb8babcbb17460016b32a07.mockapi.io/data/tabs?filter=' + JSON.stringify(value))
-          .then(response => {this.tabs = response.data})
-          .catch(error => dispatch(getDanaFailed(error.massage)))
-  }
-}
+// export const getDataCategory = (value) => {
+//   return (dispatch) => {
+//       axios
+//           .get('https://5eb8babcbb17460016b32a07.mockapi.io/data/tabs?filter=' + JSON.stringify(value))
+//           .then(response => {this.tabs = response.data})
+//           .catch(error => dispatch(getDanaFailed(error.massage)))
+//   }
+// }
 
 // export const getDanaById = (id) => {
 //   return function (dispatch) {

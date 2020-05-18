@@ -6,15 +6,10 @@ import { connect } from "react-redux";
 
 import { Jumbotron, ProgressBar } from "react-bootstrap";
 
-import jwt from "jwt-decode";
-
 import { getDetailDonasi } from "../Action/DetailAction";
 import Donate from "../Components/Detail/Donate";
 
 function DetailsCharity(props) {
-  localStorage.getItem("token")
-  let decode =jwt(localStorage.getItem("token"))
-  console.log("decode", decode)
   const StyleDiv = styled.div`
     .Jumbo {
       background-color: #584c4c !important ;

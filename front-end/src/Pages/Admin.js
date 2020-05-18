@@ -4,7 +4,7 @@ import { Jumbotron, Table, Container, Badge, Button } from "react-bootstrap";
 
 import { connect } from "react-redux";
 
-import { getDataDana, putDataEdit, getDataCategory } from "../Action/AdminAction";
+import { getDataDana, putDataEdit } from "../Action/AdminAction";
 import "../Components/Admin/admin.scss";
 
 function Admin(props) {
@@ -18,7 +18,7 @@ function Admin(props) {
 
       let newData = {
         id: id,
-        Status: "waiting",
+        status: "approve                                                                                                                                                                                                                                                                                                                                                                                                                                                        ",
       }
       props.putDataEdit(newData, id)
 
@@ -29,7 +29,7 @@ function Admin(props) {
     console.log(value)
       let filter = {
         where : {
-          status: "approve",
+          Status: "approve",
         }
       }
       props.getDataCategory(filter)
@@ -102,7 +102,6 @@ const mapDispatchToProps = (dispatch) => {
     getDataDana: () => dispatch(getDataDana()),
     putDataEdit: (data, id) => 
       dispatch(putDataEdit(data, id)),
-    getDataCategory: (filter) => dispatch(getDataCategory(filter))
   }
 };
 
