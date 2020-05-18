@@ -7,6 +7,8 @@
 5. Axios
 6. MDB React
 7. Font Awesome
+8. jwt-decode
+9. query-string
 
 
 >NOTE\
