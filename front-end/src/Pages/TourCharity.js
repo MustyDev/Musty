@@ -238,9 +238,9 @@ export default function TourCharity(props) {
                         fontStyle: "bold",
                       }}
                     >
-                      {errors.nominalDonasi &&
-                        touched.nominalDonasi &&
-                        errors.nominalDonasi}
+                      {errors.nominal &&
+                        touched.nominal &&
+                        errors.nominal}
                     </span>
                   </Form.Group>
                   <Form.Group controlId="exampleForm.ControlTextarea1">

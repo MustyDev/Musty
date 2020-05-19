@@ -17,6 +17,8 @@ function Konser(props) {
     props.getDataKonser()
   }, []);
   const approve = props.konser.filter(konser => konser.Status === "approve")
+  console.log(approve, "approve");
+  
   return (
     <div>
       <Container>

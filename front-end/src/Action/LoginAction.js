@@ -15,7 +15,7 @@ export const setLogin = (data) => {
 export const login = (values, history, event) => (dispatch) => {
     event.preventDefault()
 
-    console.log("tes", values, history)
+  
 
     const Email = values.Email
     const Password = values.Password
@@ -26,7 +26,7 @@ export const login = (values, history, event) => (dispatch) => {
             queryString.stringify({Email, Password})
         )
         .then((response) => {
-            console.log(response)
+          
 
             if(response.data.token !== undefined){
                 console.log("token ada")
