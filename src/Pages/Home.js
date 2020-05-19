@@ -1,4 +1,5 @@
 import React from "react";
+
 import Carousel from "../Components/Home/Carousel";
 import Category from "../Components/Home/Category";
 import Container from "../Components/Home/Container";
@@ -19,27 +20,23 @@ import AlatMusik from '../Components/Home/AlatMusik'
 function Home() {
   return (
     <div>
-      <Router>
         <Carousel />
         <Container />
         <Category />
-        <Switch>
-          <Route exact path="/">
+          <Route exact path="/home">
             <Project />
           </Route>
-          <Route path="/konser">
+          <Route path="/home/konser">
             <Konser />
           </Route>
-          <Route path="/album">
+          <Route path="/home/album">
             <Album />
           </Route>
-          <Route path="/alatmusik">
+          <Route path="/home/alatmusik">
             <AlatMusik />
           </Route>
-        </Switch>
         <Total />
         <Testimoni />
-      </Router>
     </div>
   );
 }

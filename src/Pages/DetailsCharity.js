@@ -114,18 +114,19 @@ function DetailsCharity(props) {
                     <div className="col-md-8">
                       <div className="card-body">
                         <h1 className="card-title">{item.Judul}</h1>
-                        <div className="progress-bar">
+                        <h4 className="card-text">{item.Organisasi}</h4>
+                        <div className="progress-titlebar">
                           <ProgressBar variant="primary" now={80} />
                         </div>
                         <div className="status">
                           <p className="card-text">
-                            Rp.1.800.000 Terkumpul dari Rp.2.000.000
+                            Rp{item.Nominal} Terkumpul dari Rp{item.Nominal}
                           </p>
                           <p className="card-persen">80%</p>
                         </div>
                         <p className="card-date">
                           <small className="text-muted">
-                            1 Januari 2020 - 1 Januari
+                            {item.Waktu_start} - {item.Waktu_end}
                           </small>
                         </p>
                         <Donate />
@@ -139,18 +140,7 @@ function DetailsCharity(props) {
                 id="container-deskripsi"
               >
                 <div className="container col-md-7">
-                  <p>
-                    Add-in your full project description here. Lorem ipsum dolor
-                    sit amet, consectetur adipiscing elit. Praesent vulputate
-                    sed mauris vitae pellentesque. Nunc ut ullamcorper libero.
-                    Aenean fringilla mauris quis risus laoreet interdum. Quisque
-                    imperdiet orci in metus aliquam egestas. Fusce elit libero,
-                    imperdiet nec orci quis, convallis hendrerit nisl. Cras
-                    auctor nec purus at placerat. Quisque consectetur, lectus in
-                    ullamcorper tempus, dolor arcu suscipit elit, id laoreet
-                    tortor justo nec arcu. Nam eu dictum ipsum. Morbi in mi eu
-                    urna placerat finibus a vel neque.
-                  </p>
+                  <p>{item.Deskripsi}</p>
                 </div>
                 <div className="container col-md-3" id="daftar-donatur">
                   <h3>Donatur</h3>
