@@ -11,7 +11,7 @@ import image from "../Images/concert1.jpg";
 import Donate from "../Components/Detail/Donate";
 
 function DetailsCharity(props) {
-  const item = useSelector((state) => state.getDetail.detail)
+  const item = useSelector((state) => state.getDetail.detail);
   const StyleDiv = styled.div`
     .Jumbo {
       background-image: url(${image});
@@ -82,10 +82,13 @@ function DetailsCharity(props) {
       }
     }
   `;
-
+  const params = props.match.params.id
   useEffect(() => {
-    props.getDetailDonasi();
+    props.getDetailDonasi(params);
   }, []);
+
+  let detail = useSelector((props) => props.getDetail.detail);
+  // console.log("detail", detail);
 
   return (
     <Fragment>
@@ -95,8 +98,56 @@ function DetailsCharity(props) {
         </Jumbotron>
       </StyleDiv>
       <StyleCard>
+        <div>
+          <div
+            className="container col-md-10 animated zoomIn"
+            id="containerCard"
+          >
+            <div
+              id="cardItem"
+              className="card"
+              style={{ maxWidth: "1000px", maxHeight: "800px" }}
+            >
+              <div className="row no-gutters">
+                <div className="col-md-4">
+                  <img src={detail.Url} className="card-img" alt="gambar" />
+                </div>
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <h1 className="card-title">{detail.Judul}</h1>
+                    <h4 className="card-text">{detail.Organisasi}</h4>
+                    <div className="progress-titlebar">
+                      <ProgressBar variant="primary" now={80} />
+                    </div>
+                    <div className="status">
+                      <p className="card-text">
+                        Rp{detail.Jumlah} Terkumpul dari Rp
+                        {detail.Nominal}
+                      </p>
+                      <p className="card-persen">80%</p>
+                    </div>
+                    <p className="card-date">
+                      <small className="text-muted">
+                        {detail.Waktu_start} - {detail.Waktu_end}
+                      </small>
+                    </p>
+                    <Donate />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="container col-md-11 animated zoomIn"
+            id="container-deskripsi"
+          >
+            <div className="container col-md-7">
+              <p>{detail.Deskripsi}</p>
+            </div>
+          </div>
+        </div>
         {/* {props.data.map((item) => {
-          return ( */}
+          return (
             <div>
               <div
                 className="container col-md-10 animated zoomIn"
@@ -161,7 +212,7 @@ function DetailsCharity(props) {
                 </div>
               </div>
             </div>
-          {/* );
+          );
         })} */}
       </StyleCard>
     </Fragment>
@@ -170,7 +221,7 @@ function DetailsCharity(props) {
 
 const mapDispatchToProps = (dispatch) => {
   data: return {
-    getDetailDonasi: () => dispatch(getDetailDonasi()),
+    getDetailDonasi: (id) => dispatch(getDetailDonasi(id)),
   };
 };
 

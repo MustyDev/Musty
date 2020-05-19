@@ -5,11 +5,11 @@ import { Form, InputGroup, Button, Modal } from "react-bootstrap";
 import axios from "axios";
 
 import "../../Assets/Donate/Donate.scss";
-import { connect, useSelector } from 'react-redux'
+import { connect } from 'react-redux'
 import { putDonasiJumlah, getDetailDonasi } from '../../Action/DetailAction'
 
 const Donate = (props) => {
-  const item = useSelector((state) => state.getDetail.detail)
+  // const item = useSelector((state) => state.getDetail.detail)
   
   const [show, setShow] = useState(false);
 
@@ -33,11 +33,11 @@ const Donate = (props) => {
   const handleClickStatus = (jumlah, id) => {
     
     let newData = {
-      jumlah: parseInt(data.jumlah,) + item.Jumlah,
+      jumlah: parseInt(data.jumlah,) + props.donasi.Jumlah,
     };
-    console.log("new", newData, item.ID);
+    console.log("new", newData, props.donasi.ID);
 
-    props.putDonasiJumlah(newData, item.ID);
+    props.putDonasiJumlah(newData, props.donasi.ID);
   };
 
   
@@ -100,7 +100,7 @@ const Donate = (props) => {
               variant="primary"
               size="sm"
               onClick={() => {
-                handleClickStatus(item.ID);
+                handleClickStatus(props.donasi.ID);
               }}
             >
               Kirim Donasi
