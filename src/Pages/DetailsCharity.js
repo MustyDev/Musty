@@ -82,7 +82,7 @@ function DetailsCharity(props) {
       }
     }
   `;
-  const params = props.match.params.id
+  const params = props.match.params.id;
   useEffect(() => {
     props.getDetailDonasi(params);
   }, []);

@@ -34,8 +34,9 @@ export function putDonasi(data) {
 }
 
 export function getDetailDonasi(id) {
-    console.log("id",id)
-    return function (dispatch) {
+  console.log("id-detail", id);
+
+  return function (dispatch) {
     dispatch(getDetail());
     axios
       .get(`https://musty-api.herokuapp.com/donasi/${id}`)
@@ -45,7 +46,7 @@ export function getDetailDonasi(id) {
 }
 
 export const putDonasiJumlah = (data, id) => {
-    console.log("id provider", id)
+  console.log("id provider", id);
   return function (dispatch) {
     dispatch(getDetail());
     const jumlah = data.jumlah;

@@ -28,7 +28,7 @@ function Project(props) {
   const handleClick = (items) => {
     console.log("items", items.ID);
     history.push(`/details-charity/${items.ID}`);
-   //  console.log("get", props.getDetailDonasi(items.ID));
+    //  console.log("get", props.getDetailDonasi(items.ID));
   };
 
   return (
@@ -42,36 +42,36 @@ function Project(props) {
           <CardDeck className="card-deck">
             {approve.map((items) => {
               return (
-                <div className="col-lg-4" onClick={()=>handleClick(items)}>
+                <div className="col-lg-4" onClick={() => handleClick(items)}>
                   <Card className="card-galangdana">
-                    <Link to="/details-charity">
-                      <Card.Img
-                        className="card-img"
-                        variant="top"
-                        src={items.Url}
-                        style={{ width: "100%", height: "200px" }}
-                      />
-                      <Card.Body>
-                        <h4 className="text-dark">{items.Judul}</h4>
-                        <span className="text-muted">
-                          {items.Nama} - {items.Organisasi}
-                        </span>
-                        <p>
-                          <ProgressBar
-                            now={(100 / items.Nominal) * items.Jumlah}
-                            className="progress-bar-project"
-                          />
-                        </p>
-                        <h5 className="text-dark">
-                          Terkumpul Rp {items.Jumlah} dari Rp {items.Nominal}
-                        </h5>
-                      </Card.Body>
-                      <Card.Footer>
-                        <small className="text-dark">
-                          {items.Waktu_start} - {items.Waktu_end}
-                        </small>
-                      </Card.Footer>
-                    </Link>
+                    {/* <Link to="/details-charity"> */}
+                    <Card.Img
+                      className="card-img"
+                      variant="top"
+                      src={items.Url}
+                      style={{ width: "100%", height: "200px" }}
+                    />
+                    <Card.Body>
+                      <h4 className="text-dark">{items.Judul}</h4>
+                      <span className="text-muted">
+                        {items.Nama} - {items.Organisasi}
+                      </span>
+                      <p>
+                        <ProgressBar
+                          now={(100 / items.Nominal) * 0}
+                          className="progress-bar-project"
+                        />
+                      </p>
+                      <h5 className="text-dark">
+                        Terkumpul Rp {items.Nominal} dari Rp {items.Nominal}
+                      </h5>
+                    </Card.Body>
+                    <Card.Footer>
+                      <small className="text-dark">
+                        {items.Waktu_start} - {items.Waktu_end}
+                      </small>
+                    </Card.Footer>
+                    {/* </Link> */}
                   </Card>
                   <br />
                 </div>
