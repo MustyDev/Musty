@@ -15,9 +15,9 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import TourCharity from "./Pages/TourCharity";
 import PrivateRoute from "./PrivateRoutes";
-import Konser from './Components/Home/Konser'
-import Album from './Components/Home/Album'
-import AlatMusik from './Components/Home/AlatMusik'
+import Konser from "./Components/Home/Konser";
+import Album from "./Components/Home/Album";
+import AlatMusik from "./Components/Home/AlatMusik";
 
 function App() {
   return (
@@ -41,18 +41,18 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/details-charity">
-            <DetailsCharity />
-          </Route>
+          <Route path="/details-charity/:id" exact component={DetailsCharity} />
+          {/* <DetailsCharity />
+          </Route> */}
           <Route path="/konser">
             <Konser />
           </Route>
           <Route path="/album">
             <Album />
-         </Route>
-         <Route path="/alatmusik">
+          </Route>
+          <Route path="/alatmusik">
             <AlatMusik />
-         </Route>
+          </Route>
         </Switch>
       </Router>
       <Footer />

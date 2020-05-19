@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from "react";
 
 import styled from "styled-components";
 
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 
 import { Jumbotron, ProgressBar } from "react-bootstrap";
 
@@ -87,6 +87,9 @@ function DetailsCharity(props) {
     props.getDetailDonasi();
   }, []);
 
+  let detail = useSelector((props) => props.getDetail.detail);
+  // console.log("detail", detail);
+
   return (
     <Fragment>
       <StyleDiv>
@@ -95,7 +98,55 @@ function DetailsCharity(props) {
         </Jumbotron>
       </StyleDiv>
       <StyleCard>
-        {props.data.map((item) => {
+        <div>
+          <div
+            className="container col-md-10 animated zoomIn"
+            id="containerCard"
+          >
+            <div
+              id="cardItem"
+              className="card"
+              style={{ maxWidth: "1000px", maxHeight: "800px" }}
+            >
+              <div className="row no-gutters">
+                <div className="col-md-4">
+                  <img src={detail.Url} className="card-img" alt="gambar" />
+                </div>
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <h1 className="card-title">{detail.Judul}</h1>
+                    <h4 className="card-text">{detail.Organisasi}</h4>
+                    <div className="progress-titlebar">
+                      <ProgressBar variant="primary" now={80} />
+                    </div>
+                    <div className="status">
+                      <p className="card-text">
+                        Rp{detail.Jumlah} Terkumpul dari Rp
+                        {detail.Nominal}
+                      </p>
+                      <p className="card-persen">80%</p>
+                    </div>
+                    <p className="card-date">
+                      <small className="text-muted">
+                        {detail.Waktu_start} - {detail.Waktu_end}
+                      </small>
+                    </p>
+                    <Donate />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="container col-md-11 animated zoomIn"
+            id="container-deskripsi"
+          >
+            <div className="container col-md-7">
+              <p>{detail.Deskripsi}</p>
+            </div>
+          </div>
+        </div>
+        {/* {props.data.map((item) => {
           return (
             <div>
               <div
@@ -162,17 +213,17 @@ function DetailsCharity(props) {
               </div>
             </div>
           );
-        })}
+        })} */}
       </StyleCard>
     </Fragment>
   );
 }
 
-const mapStateToProps = (props) => {
-  return {
-    data: props.getDetail.detail,
-  };
-};
+// const mapStateToProps = (props) => {
+//   return {
+//     data: props.getDetail.detail,
+//   };
+// };
 
 const mapDispatchToProps = (dispatch) => {
   data: return {
@@ -180,5 +231,5 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DetailsCharity);
+export default connect(null, mapDispatchToProps)(DetailsCharity);
 // export default DetailsCharity;
