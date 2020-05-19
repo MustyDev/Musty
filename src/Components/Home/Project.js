@@ -11,6 +11,7 @@ import { getDataDonasi } from '../../Action/HomeAction'
 import { connect } from 'react-redux'
 
 function Project(props) {
+   console.log(props, "propss")
    const now = 50;
    const progressInstance = (
       <ProgressBar now={now} label={`${now}%`} className="progress-bar-project" />
