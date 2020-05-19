@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 
-import { Card, CardDeck, ProgressBar, Container } from "react-bootstrap";
+import { Card, CardDeck, ProgressBar, Container, Row } from "react-bootstrap";
 
 import { connect } from 'react-redux';
 
 import "../../App.css";
 import { getDataAlbum } from '../../Action/CategoryAction'
+import { MdAlbum } from "react-icons/md";
+import Kontainer from "./Container";
 
 function Album(props) {
 
@@ -19,11 +21,24 @@ function Album(props) {
   const approve = props.album.filter(album => album.Status === "approve")
   return (
     <div>
+      <Kontainer />
+         <Row className="row-category">
+            <Card className="card-category">
+               <Link to="/konser" style={{ textDecoration: "none" }}>
+                  <Card.Body>
+                  <center>
+                     <MdAlbum className="icon" />
+                  </center>
+                  <Card.Title className="text">Album</Card.Title>
+                  </Card.Body>
+               </Link>
+            </Card>
+         </Row>
       <Container>
-        <h1 className="text-title">Album</h1>
+        {/* <h1 className="text-title">Album</h1>
         <h5 className="title-description">
           Mulai Donasi untuk Musisi Idola Kamu.
-        </h5>
+        </h5> */}
         <div className="container">
                <CardDeck className="card-deck">
                   {approve.map((items) => {

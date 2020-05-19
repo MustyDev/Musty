@@ -7,11 +7,11 @@ import { connect, useSelector } from "react-redux";
 import { Jumbotron, ProgressBar } from "react-bootstrap";
 
 import { getDetailDonasi } from "../Action/DetailAction";
+import image from "../Images/concert1.jpg";
 import Donate from "../Components/Detail/Donate";
 
-import image from "../Images/concert1.jpg";
-
 function DetailsCharity(props) {
+  const item = useSelector((state) => state.getDetail.detail);
   const StyleDiv = styled.div`
     .Jumbo {
       background-image: url(${image});
