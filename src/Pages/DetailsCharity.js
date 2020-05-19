@@ -2,16 +2,16 @@ import React, { Fragment, useEffect } from "react";
 
 import styled from "styled-components";
 
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 
 import { Jumbotron, ProgressBar } from "react-bootstrap";
 
 import { getDetailDonasi } from "../Action/DetailAction";
+import image from "../Images/concert1.jpg";
 import Donate from "../Components/Detail/Donate";
 
-import image from "../Images/concert1.jpg";
-
 function DetailsCharity(props) {
+  const item = useSelector((state) => state.getDetail.detail)
   const StyleDiv = styled.div`
     .Jumbo {
       background-image: url(${image});
@@ -95,8 +95,8 @@ function DetailsCharity(props) {
         </Jumbotron>
       </StyleDiv>
       <StyleCard>
-        {props.data.map((item) => {
-          return (
+        {/* {props.data.map((item) => {
+          return ( */}
             <div>
               <div
                 className="container col-md-10 animated zoomIn"
@@ -161,8 +161,8 @@ function DetailsCharity(props) {
                 </div>
               </div>
             </div>
-          );
-        })}
+          {/* );
+        })} */}
       </StyleCard>
     </Fragment>
   );
