@@ -23,13 +23,13 @@ function Home() {
         <Carousel />
         <Container />
         <Category />
-          <Route exact path="/home">
+          <Route exact path="/">
             <Project />
           </Route>
-          <Route path="/home/konser">
+          <Route path="/konser">
             <Konser />
           </Route>
-          <Route path="/home/album">
+          <Route path="/album">
             <Album />
           </Route>
           <Route path="/home/alatmusik">

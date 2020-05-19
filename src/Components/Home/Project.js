@@ -11,6 +11,7 @@ import { getDataDonasi } from '../../Action/HomeAction'
 import { connect } from 'react-redux'
 
 function Project(props) {
+  console.log("atas", props)
   const now = 50;
   const progressInstance = (
     <ProgressBar now={now} label={`${now}%`} className="progress-bar-project" />
@@ -29,7 +30,7 @@ function Project(props) {
         </h5>
         <div>
           <CardDeck className="card-deck">
-          {approve.slice(0, 3).map((items) => {
+          {approve.map((items) => {
               return (
                 <Card className="card-galangdana">
                   <Link to="/details-charity">
@@ -53,7 +54,7 @@ function Project(props) {
           })}
           </CardDeck>
 
-          <CardDeck className="card-deck">
+          {/* <CardDeck className="card-deck">
           {approve.slice(3, 6).map((items) => {
               return (
                 <Card className="card-galangdana">
@@ -76,7 +77,7 @@ function Project(props) {
                 </Card>
               )
           })}
-          </CardDeck>
+          </CardDeck> */}
         </div>
       </Container>
     </div>
@@ -84,12 +85,14 @@ function Project(props) {
 }
 
 const mapStateToProps = (props) => {
+  console.log(props)
   return {
     donasi: props.getDonasi.data
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
+  console.log(dispatch)
   return{
     getDataDonasi: () => dispatch(getDataDonasi())
   }
