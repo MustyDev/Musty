@@ -55,7 +55,7 @@ export const putDonasiJumlah = (data, id) => {
         queryString.stringify({ jumlah }),
         { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
       )
-      .then((result) => dispatch(getDetailDonasi(result.data)))
+      .then((result) => dispatch(getDetailDonasi(result.data.ID)))
       .catch((error) => dispatch(getDetailFailed(error.massage)));
   };
 };
