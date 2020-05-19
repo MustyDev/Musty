@@ -58,7 +58,7 @@ function MenuBar() {
               >
                 <NavDropdown.Item>
                   <Link
-                    to="/"
+                    to="/konser"
                     style={{ textDecoration: "none" }}
                     className="link-category"
                   >
@@ -67,7 +67,7 @@ function MenuBar() {
                 </NavDropdown.Item>
                 <NavDropdown.Item>
                   <Link
-                    to="/"
+                    to="/album"
                     style={{ textDecoration: "none" }}
                     className="link-category"
                   >
@@ -76,7 +76,7 @@ function MenuBar() {
                 </NavDropdown.Item>
                 <NavDropdown.Item>
                   <Link
-                    to="/"
+                    to="/alatmusik"
                     style={{ textDecoration: "none" }}
                     className="link-category"
                   >
