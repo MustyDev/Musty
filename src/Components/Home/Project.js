@@ -11,11 +11,11 @@ import { getDataDonasi } from '../../Action/HomeAction'
 import { connect } from 'react-redux'
 
 function Project(props) {
-   console.log(props, "propss")
-   const now = 50;
-   const progressInstance = (
-      <ProgressBar now={now} label={`${now}%`} className="progress-bar-project" />
-   );
+  console.log("atas", props)
+  const now = 50;
+  const progressInstance = (
+    <ProgressBar now={now} label={`${now}%`} className="progress-bar-project" />
+  );
 
    useEffect(() => {
       props.getDataDonasi()
@@ -76,3 +76,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Project);
+

@@ -19,18 +19,18 @@ import AlatMusik from '../Components/Home/AlatMusik'
 
 
 function Home() {
-   return (
-      <div>
-         <Carousel />
-         <Container />
-         <Category />
-         <Project />
-         {/* <Route exact path="/">
-         </Route> */}
-         <Route path="/konser">
+  return (
+    <div>
+        <Carousel />
+        <Container />
+        <Category />
+          <Route exact path="/">
+            <Project />
+          </Route>
+          <Route path="/konser">
             <Konser />
-         </Route>
-         <Route path="/album">
+          </Route>
+          <Route path="/album">
             <Album />
          </Route>
          <Route path="/alatmusik">

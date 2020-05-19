@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Jumbotron } from "react-bootstrap";
 import "../App.css";
 import Images from "../Images/Logo-Musty.png";
-import dani from "../Images/dani.jpeg";
+import dani from "../Images/dani.jpg";
 import wahid from "../Images/Wahid.jpg";
 import enggar from "../Images/enggar.jpeg";
 

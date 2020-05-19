@@ -29,7 +29,7 @@ export function getDataDonasi(){
         dispatch(getDonasi())
         axios
         .get('https://musty-api.herokuapp.com/donasi')
-        .then(result => dispatch(getDonasiSuccess(result.data)))
+        .then((result) => dispatch(getDonasiSuccess(result.data)))
         .catch(error => dispatch(getDonasiFailed(error.massage)))
     }
 }
