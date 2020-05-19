@@ -9,7 +9,7 @@ const Crsl = () => {
     <div>
       <Carousel>
         <Carousel.Item>
-          <img className="d-block w-100" src={Header} alt="Header" />
+          <img className="d-block w-100" src={Header3} alt="Header" />
           <Carousel.Caption className="caption-carousel">
             <h1 className="title-carousel">
               Ayo Donasi Untuk Musisi Idola Kamu!
@@ -31,7 +31,7 @@ const Crsl = () => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={Header3} alt="Header" />
+          <img className="d-block w-100" src={Header} alt="Header" />
           <Carousel.Caption className="caption-carousel">
             <h1 className="title-carousel">
               Ayo Donasi Untuk Musisi Idola Kamu!

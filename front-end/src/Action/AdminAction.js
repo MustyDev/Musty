@@ -59,22 +59,3 @@ export const putDataEdit = (data, id) => {
       .catch((error) => dispatch(getDanaFailed(error.massage)));
   };
 };
-
-// export const getDataCategory = (value) => {
-//   return (dispatch) => {
-//       axios
-//           .get('https://5eb8babcbb17460016b32a07.mockapi.io/data/tabs?filter=' + JSON.stringify(value))
-//           .then(response => {this.tabs = response.data})
-//           .catch(error => dispatch(getDanaFailed(error.massage)))
-//   }
-// }
-
-// export const getDanaById = (id) => {
-//   return function (dispatch) {
-//     dispatch(getDana());
-//     axios
-//       .get(`https://5eb8babcbb17460016b32a07.mockapi.io/data/${id}`)
-//       .then(() => dispatch(getDataDana()))
-//       .catch((error) => dispatch(getDanaFailed(error.massage)));
-//   };
-// };

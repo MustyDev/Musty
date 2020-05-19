@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 import { Card, CardDeck, ProgressBar, Container } from "react-bootstrap";
-import { connect } from 'react-redux'
+
+import { connect } from 'react-redux';
+
 import "../../App.css";
 import { getDataKonser } from '../../Action/CategoryAction'
 
@@ -15,6 +17,8 @@ function Konser(props) {
     props.getDataKonser()
   }, []);
   const approve = props.konser.filter(konser => konser.Status === "approve")
+  console.log(approve, "approve");
+  
   return (
     <div>
       <Container>
@@ -31,11 +35,11 @@ function Konser(props) {
                     <Card.Img className="card-img" variant="top" src={items.Url} />
                     <Card.Body>
                       <h4 className="text-dark">{items.Judul}</h4>
-                      <span className="text-muted">{items.Nama}</span>
+                      <span className="text-muted">{items.Nama} - {items.Organisasi}</span>
                       <p><ProgressBar now={100 / items.Nominal * 0} 
                             label={100 / items.Nominal * 0,`%`} className="progress-bar-project" />
                       </p>
-                      <h5 className="text-dark">{items.Nominal}</h5>
+                      <h5 className="text-dark">Terkumpul Rp {items.Nominal} dari Rp {items.Nominal}</h5>
                     </Card.Body>
                     <Card.Footer>
                       <small className="text-dark">
@@ -56,11 +60,11 @@ function Konser(props) {
                     <Card.Img className="card-img" variant="top" src={items.Url} />
                     <Card.Body>
                       <h4 className="text-dark">{items.Judul}</h4>
-                      <span className="text-muted">{items.Nama}</span>
+                      <span className="text-muted">{items.Nama} - {items.Organisasi}</span>
                       <p><ProgressBar now={100 / items.Nominal * 0} 
                             label={100 / items.Nominal * 0,`%`} className="progress-bar-project" />
                       </p>
-                      <h5 className="text-dark">{items.Nominal}</h5>
+                      <h5 className="text-dark">Terkumpul Rp {items.Nominal} dari Rp {items.Nominal}</h5>
                     </Card.Body>
                     <Card.Footer>
                       <small className="text-dark">
