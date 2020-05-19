@@ -82,12 +82,9 @@ function DetailsCharity(props) {
       }
     }
   `;
-
-  const param = props.match.params.id;
+  const params = props.match.params.id;
   useEffect(() => {
-    console.log("param", param);
-
-    props.getDetailDonasi(param);
+    props.getDetailDonasi(params);
   }, []);
 
   let detail = useSelector((props) => props.getDetail.detail);
@@ -221,12 +218,6 @@ function DetailsCharity(props) {
     </Fragment>
   );
 }
-
-// const mapStateToProps = (props) => {
-//   return {
-//     data: props.getDetail.detail,
-//   };
-// };
 
 const mapDispatchToProps = (dispatch) => {
   data: return {

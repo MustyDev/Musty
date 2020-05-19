@@ -28,7 +28,7 @@ function Project(props) {
   const handleClick = (items) => {
     console.log("items", items.ID);
     history.push(`/details-charity/${items.ID}`);
-    // console.log(props.getDetailDonasi(items.ID));
+    //  console.log("get", props.getDetailDonasi(items.ID));
   };
 
   return (
@@ -42,7 +42,7 @@ function Project(props) {
           <CardDeck className="card-deck">
             {approve.map((items) => {
               return (
-                <div onClick={() => handleClick(items)} className="col-lg-4">
+                <div className="col-lg-4" onClick={() => handleClick(items)}>
                   <Card className="card-galangdana">
                     {/* <Link to="/details-charity"> */}
                     <Card.Img

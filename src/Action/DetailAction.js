@@ -46,6 +46,7 @@ export function getDetailDonasi(id) {
 }
 
 export const putDonasiJumlah = (data, id) => {
+  console.log("id provider", id);
   return function (dispatch) {
     dispatch(getDetail());
     const jumlah = data.jumlah;
