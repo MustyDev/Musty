@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 
 import styled from "styled-components";
 
+import "../App.css";
+
 import { Formik } from "formik";
 
 import { useHistory } from "react-router-dom";
@@ -17,9 +19,6 @@ export default function TourCharity(props) {
   const dispatch = useDispatch();
 
   const StyleDiv = styled.div`
-    .Jumbo {
-      background-color: #584c4c !important ;
-    }
     .Title {
       color: white !important ;
       text-align: center;
@@ -238,9 +237,7 @@ export default function TourCharity(props) {
                         fontStyle: "bold",
                       }}
                     >
-                      {errors.nominal &&
-                        touched.nominal &&
-                        errors.nominal}
+                      {errors.nominal && touched.nominal && errors.nominal}
                     </span>
                   </Form.Group>
                   <Form.Group controlId="exampleForm.ControlTextarea1">

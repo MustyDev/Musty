@@ -200,7 +200,14 @@ footer {
 }
 
 .jumboroton-about {
-  background-image: url(https://images.pexels.com/photos/736355/pexels-photo-736355.jpeg);
+  background-image: url("./Images/concert3.jpg");
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+
+.Jumbo {
+  background-image: url("./Images/concert3.jpg");
   background-size: cover;
   background-position: center;
   display: block;

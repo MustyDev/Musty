@@ -131,20 +131,21 @@ function DetailsCharity(props) {
                         {detail.Waktu_start} - {detail.Waktu_end}
                       </small>
                     </p>
+                    <p>{detail.Deskripsi}</p>
                     <Donate />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div
+          {/* <div
             className="container col-md-11 animated zoomIn"
             id="container-deskripsi"
-          >
-            <div className="container col-md-7">
+          > */}
+          {/* <div className="container col-md-7">
               <p>{detail.Deskripsi}</p>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
         {/* {props.data.map((item) => {
           return (

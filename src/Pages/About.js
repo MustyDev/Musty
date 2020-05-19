@@ -6,6 +6,8 @@ import Images from "../Images/Logo-Musty.png";
 import dani from "../Images/dani.jpg";
 import wahid from "../Images/Wahid.jpg";
 import enggar from "../Images/enggar.jpeg";
+import bayu from "../Images/Bayu.jpg";
+import hadyd from "../Images/Hadyd.jpg";
 
 const About = () => {
   const StyleDiv = styled.div`
@@ -62,10 +64,7 @@ const About = () => {
                   <p className="text-secondary">Full-Stack Developer</p>
                 </div>
                 <div className="col text-center">
-                  <img
-                    src="https://image.flaticon.com/icons/svg/2918/2918921.svg"
-                    className="profile-team"
-                  />
+                  <img src={hadyd} className="profile-team" />
                   <h4>
                     <strong>Hadyd</strong>
                   </h4>
@@ -86,10 +85,7 @@ const About = () => {
                   <p className="text-secondary">Back-End Developer</p>
                 </div>
                 <div className="col text-center">
-                  <img
-                    src="https://image.flaticon.com/icons/svg/2918/2918921.svg"
-                    className="profile-team"
-                  />
+                  <img src={bayu} className="profile-team" />
                   <h4>
                     <strong>Bayu</strong>
                   </h4>

@@ -5,8 +5,10 @@ function Cntnr() {
   return (
     <Jumbotron fluid className="jumbotron-category">
       <Container className="container-category">
-        <h1 className="text-title1">Mulai Donasi untuk Musisi Idola Kamu.</h1>
-        <h5 className="title-description1">Kategori</h5>
+        <h1 className="text-title1">Kategori Donasi</h1>
+        <h5 className="title-description1">
+          Mulai Donasi untuk Musisi Idola Kamu
+        </h5>
       </Container>
     </Jumbotron>
   );
