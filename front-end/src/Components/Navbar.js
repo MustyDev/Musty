@@ -20,6 +20,7 @@ const Nav = () => {
   const history = useHistory()
   const isLogged = useSelector((state) => state.loginState.isLogged);
 
+  
   const logOutHandler = e => {
     history.push('/')
     localStorage.removeItem("token")
