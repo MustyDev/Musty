@@ -50,10 +50,10 @@ function Album(props) {
                                  <Card.Body>
                                     <h4 className="text-dark">{items.Judul}</h4>
                                     <span className="text-muted">{items.Nama} - {items.Organisasi}</span>
-                                    <p><ProgressBar now={100 / items.Nominal * 0}
+                                    <p><ProgressBar now={100 / items.Nominal * items.Jumlah}
                                        className="progress-bar-project" />
                                     </p>
-                                    <h5 className="text-dark">Terkumpul Rp {items.Nominal} dari Rp {items.Nominal}</h5>
+                                    <h5 className="text-dark">Terkumpul Rp {items.Jumlah} dari Rp {items.Nominal}</h5>
                                  </Card.Body>
                                  <Card.Footer>
                                     <small className="text-dark">
