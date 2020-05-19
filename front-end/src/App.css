@@ -212,6 +212,9 @@ footer {
 
 .profile-team {
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
   height: 150px;
   width: 150px;
 }
@@ -236,4 +239,14 @@ footer {
   .deskripsi-carousel {
     font-size: 20px;
   }
+}
+
+.musisi {
+  margin-top: 10px;
+  color: #dc23d4;
+}
+
+.testimoni-musisi {
+  margin-left: 20px;
+  margin-right: 20px;
 }

@@ -17,14 +17,14 @@ import jwt from "jwt-decode";
 import "../App.css";
 
 const Nav = () => {
-  const history = useHistory()
+  const history = useHistory();
   const isLogged = useSelector((state) => state.loginState.isLogged);
 
-  const logOutHandler = e => {
-    history.push('/')
-    localStorage.removeItem("token")
-    window.location.reload(false)
-  }
+  const logOutHandler = (e) => {
+    history.push("/");
+    localStorage.removeItem("token");
+    window.location.reload(false);
+  };
 
   if (isLogged === false) {
     return (
@@ -39,7 +39,7 @@ const Nav = () => {
           <a href="https://www.twitter.com/" className="icon-sosmed">
             <FaTwitter />
           </a>
-          <a href="https://github.com/MustyDev">
+          <a href="https://github.com/MustyDev" className="icon-sosmed">
             <FaGithub />
           </a>
 
@@ -84,8 +84,11 @@ const Nav = () => {
                 <Link to="/admin" className="text-donasi">
                   Admin
                 </Link>
-                <Link onClick={e=>logOutHandler(e)} className="text text-muted">
-                  LogOut
+                <Link
+                  onClick={(e) => logOutHandler(e)}
+                  className="text text-muted"
+                >
+                  Keluar
                 </Link>
               </Navbar.Text>
             </Navbar.Collapse>
@@ -115,8 +118,11 @@ const Nav = () => {
                 <Link to="/form-tourcharity" className="text-donasi">
                   Buat Donasi
                 </Link>
-                <Link onClick={e=>logOutHandler(e)} className="text text-muted">
-                  LogOut
+                <Link
+                  onClick={(e) => logOutHandler(e)}
+                  className="text text-muted"
+                >
+                  Keluar
                 </Link>
               </Navbar.Text>
             </Navbar.Collapse>
@@ -142,8 +148,11 @@ const Nav = () => {
 
             <Navbar.Collapse className="justify-content-end">
               <Navbar.Text>
-                <Link onClick={e=>logOutHandler(e)} className="text text-muted">
-                  LogOut
+                <Link
+                  onClick={(e) => logOutHandler(e)}
+                  className="text text-muted"
+                >
+                  Keluar
                 </Link>
               </Navbar.Text>
             </Navbar.Collapse>

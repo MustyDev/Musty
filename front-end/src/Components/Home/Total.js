@@ -6,15 +6,15 @@ function Total() {
       <div className="row text-center">
         <div className="col">
           <h1 className="counter-title">8</h1>
-          <p className="text-center text-white">Finished Project</p>
+          <p className="text-center text-white">Donasi yang sudah terlaksana</p>
         </div>
         <div className="col justify-content-center">
           <h1 className="counter-title">10</h1>
-          <p className="text-center text-white">Donate</p>
+          <p className="text-center text-white">Para Pendonasi</p>
         </div>
         <div className="col justify-content-center">
           <h1 className="counter-title">3</h1>
-          <p className="text-center text-white">Category</p>
+          <p className="text-center text-white">Kategori Donasi</p>
         </div>
       </div>
     </div>
