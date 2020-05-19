@@ -117,7 +117,10 @@ function DetailsCharity(props) {
                     <h1 className="card-title">{detail.Judul}</h1>
                     <h4 className="card-text">{detail.Organisasi}</h4>
                     <div className="progress-titlebar">
-                      <ProgressBar variant="primary" now={80} />
+                    <ProgressBar
+                          now={(100 / detail.Nominal) * detail.Jumlah}
+                          className="progress-bar-project"
+                        />
                     </div>
                     <div className="status">
                       <p className="card-text">
@@ -172,7 +175,7 @@ function DetailsCharity(props) {
                         </div>
                         <div className="status">
                           <p className="card-text">
-                            Rp{item.Nominal} Terkumpul dari Rp{item.Nominal}
+                            Rp{item.Judul} Terkumpul dari Rp{item.Nominal}
                           </p>
                           <p className="card-persen">80%</p>
                         </div>

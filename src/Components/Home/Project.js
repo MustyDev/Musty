@@ -58,12 +58,12 @@ function Project(props) {
                       </span>
                       <p>
                         <ProgressBar
-                          now={(100 / items.Nominal) * 0}
+                          now={(100 / items.Nominal) * items.Jumlah}
                           className="progress-bar-project"
                         />
                       </p>
                       <h5 className="text-dark">
-                        Terkumpul Rp {items.Nominal} dari Rp {items.Nominal}
+                        Terkumpul Rp {items.Jumlah} dari Rp {items.Nominal}
                       </h5>
                     </Card.Body>
                     <Card.Footer>
