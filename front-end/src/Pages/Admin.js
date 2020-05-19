@@ -55,32 +55,30 @@ function Admin(props) {
           </thead>
           <tbody>
             {props.data.map((item, index) => {
-              {
-                /* if (item.Status === "") */
-              }
-              return (
-                <tr key={item.ID}>
-                  <td>{index + 1}</td>
-                  <td>{item.Nama}</td>
-                  <td>{item.Judul}</td>
-                  <td>{item.Deskripsi}</td>
-                  <td>
-                    <Badge variant="warning">{item.Status}</Badge>
-                  </td>
-                  <td>
-                    <Button
-                      variant="primary"
-                      size="sm"
-                      onClick={() => {
-                        handleClickStatus(item);
-                      }}
-                      value={"Approve"}
-                    >
-                      Approve
-                    </Button>{" "}
-                  </td>
-                </tr>
-              );
+                if (item.Status === "waiting")
+                  return (
+                    <tr key={item.ID}>
+                      <td>{index + 1}</td>
+                      <td>{item.Nama}</td>
+                      <td>{item.Judul}</td>
+                      <td>{item.Deskripsi}</td>
+                      <td>
+                        <Badge variant="warning">{item.Status}</Badge>
+                      </td>
+                      <td>
+                        <Button
+                          variant="primary"
+                          size="sm"
+                          onClick={() => {
+                            handleClickStatus(item);
+                          }}
+                          value={"Approve"}
+                        >
+                          Approve
+                        </Button>{" "}
+                      </td>
+                    </tr>
+                  );
             })}
           </tbody>
         </Table>

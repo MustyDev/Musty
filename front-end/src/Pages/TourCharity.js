@@ -1,9 +1,15 @@
 import React, { Fragment } from "react";
+
 import styled from "styled-components";
+
 import { Formik } from "formik";
+
 import { useHistory } from "react-router-dom";
+
 import { Jumbotron, Button, Form } from "react-bootstrap";
+
 import { useDispatch, useSelector } from "react-redux";
+
 import { inputDonasi } from "../Action/DonateAction";
 
 export default function TourCharity(props) {
@@ -150,9 +156,9 @@ export default function TourCharity(props) {
                       value={values.kategori}
                     >
                       <option>Pilih Category</option>
-                      <option>Konser</option>
-                      <option>Alat Musik</option>
-                      <option>Album</option>
+                      <option value="1">Konser</option>
+                      <option value="2">Alat Musik</option>
+                      <option value="3">Album</option>
                     </Form.Control>
                   </Form.Group>
                   <Form.Group>
