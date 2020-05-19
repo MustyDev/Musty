@@ -5,7 +5,7 @@ import { Form, InputGroup, Button, Modal } from "react-bootstrap";
 import "../../Assets/Donate/Donate.scss";
 import axios from "axios";
 
-const Donate = () => {
+const Donate = (props) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -26,13 +26,14 @@ const Donate = () => {
     }
   };
 
-  // const handleClick = (event) => {
-  //   event.preventDefault();
-  //   data = {
-  //     nama: nama,
-  //     donasi: donasi,
-  //   };
-  // };
+  const handleClickStatus = (item) => {
+    let newData = {
+      status: "approve",
+    };
+    console.log("new", newData);
+
+    props.putDataEdit(newData, item.ID);
+  };
 
   useEffect(() => {
     axios

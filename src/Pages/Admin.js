@@ -23,16 +23,6 @@ function Admin(props) {
     props.putDataEdit(newData, item.ID);
   };
 
-  const handleClickCategory = (value) => {
-    console.log(value);
-    let filter = {
-      where: {
-        Status: "approve",
-      },
-    };
-    props.getDataCategory(filter);
-  };
-
   return (
     <div>
       <Jumbotron fluid className="jumboAdmin darkenImage">
