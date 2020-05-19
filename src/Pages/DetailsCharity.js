@@ -168,17 +168,11 @@ function DetailsCharity(props) {
   );
 }
 
-const mapStateToProps = (props) => {
-  return {
-    data: props.getDetail.detail,
-  };
-};
-
 const mapDispatchToProps = (dispatch) => {
   data: return {
     getDetailDonasi: () => dispatch(getDetailDonasi()),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DetailsCharity);
+export default connect(null, mapDispatchToProps)(DetailsCharity);
 // export default DetailsCharity;
