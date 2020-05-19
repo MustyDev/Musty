@@ -34,10 +34,12 @@ export function putDonasi(data) {
 }
 
 export function getDetailDonasi(id) {
+  console.log("id-detail", id);
+
   return function (dispatch) {
     dispatch(getDetail());
     axios
-      .get("https://musty-api.herokuapp.com/donasi/18")
+      .get(`https://musty-api.herokuapp.com/donasi/${id}`)
       .then((result) => dispatch(getDetailSuccess(result.data)))
       .catch((error) => dispatch(getDetailFailed(error.massage)));
   };
