@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { Jumbotron } from "react-bootstrap";
+import { Jumbotron, Row, Col, Image } from "react-bootstrap";
 import "../App.css";
 import Images from "../Images/Logo-Musty.png";
 import dani from "../Images/dani.jpg";
@@ -31,7 +31,7 @@ const About = () => {
       <section className="container mt-3  ">
         <div className="row">
           <div className="col-md pt-4 pb-5">
-            <img src={Images} />
+            <img src={Images} className="logo-about"/>
           </div>
           <div className="col-md pt-5">
             <h1 className="h1-about">Music Charity</h1>
@@ -54,44 +54,34 @@ const About = () => {
                 <strong>DEVELOPER TEAM</strong>
               </h2>
               <hr />
-              <div className="row mt-5">
-                <div className="col text-center">
-                  <img src={wahid} className="profile-team" />
-
-                  <h4>
-                    <strong>Wahid</strong>
-                  </h4>
-                  <p className="text-secondary">Full-Stack Developer</p>
-                </div>
-                <div className="col text-center">
-                  <img src={hadyd} className="profile-team" />
-                  <h4>
-                    <strong>Hadyd</strong>
-                  </h4>
-                  <p className="text-secondary">Front-End Developer</p>
-                </div>
-                <div className="col text-center">
-                  <img src={dani} className="profile-team" />
-                  <h4>
-                    <strong>Zakiy Dani</strong>
-                  </h4>
-                  <p className="text-secondary">Front-End Developer</p>
-                </div>
-                <div className="col text-center">
-                  <img src={enggar} className="profile-team" />
-                  <h4>
-                    <strong>Enggar</strong>
-                  </h4>
-                  <p className="text-secondary">Back-End Developer</p>
-                </div>
-                <div className="col text-center">
-                  <img src={bayu} className="profile-team" />
-                  <h4>
-                    <strong>Bayu</strong>
-                  </h4>
-                  <p className="text-secondary">Back-End Developer</p>
-                </div>
-              </div>
+              
+              <Row className="show-grid text-center justify-content-center">
+                <Col xs={6} sm={4} className="person-team">
+                  <Image src={wahid} circle className="profile-pic" />
+                  <h3 className="musisi">Wahid</h3>
+                  <p>Fullstack-Developer</p>
+                </Col>
+                <Col xs={6} sm={4} className="person-team">
+                  <Image src={hadyd} circle className="profile-pic" />
+                  <h3 className="musisi">Hadyd</h3>
+                  <p>FrontEnd-Developer</p>
+                </Col>
+                <Col xs={6} sm={4} className="person-team">
+                  <Image src={dani} circle className="profile-pic" />
+                  <h3 className="musisi">Zakiy Dani</h3>
+                  <p>FrontEnd-Developer</p>
+                </Col>
+                <Col xs={6} sm={4} className="person-team">
+                  <Image src={bayu} circle className="profile-pic" />
+                  <h3 className="musisi">Bayu</h3>
+                  <p>BackEnd-Developer</p>
+                </Col>
+                <Col xs={6} sm={4} className="person-team">
+                  <Image src={enggar} circle className="profile-pic" />
+                  <h3 className="musisi">Enggar</h3>
+                  <p>BackEnd-Developer</p>
+                </Col>
+              </Row>
             </div>
           </div>
         </div>
