@@ -1,6 +1,7 @@
 import React from "react";
-import Logo from "../Images/Logo-Musty.png";
+
 import { Link } from "react-router-dom";
+
 import {
   Navbar,
   Nav,
@@ -10,7 +11,9 @@ import {
   Button,
   Container,
 } from "react-bootstrap";
+
 import "../App.css";
+import Logo from "../Images/Logo-Musty.png";
 
 function MenuBar() {
   return (
@@ -85,7 +88,7 @@ function MenuBar() {
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            <Nav>
+            {/* <Nav>
               <Form inline>
                 <FormControl
                   type="text"
@@ -96,7 +99,7 @@ function MenuBar() {
                   Cari Donasi
                 </Button>
               </Form>
-            </Nav>
+            </Nav> */}
           </Navbar.Collapse>
         </Navbar>
       </Container>

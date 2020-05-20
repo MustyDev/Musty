@@ -6,18 +6,16 @@ import axios from "axios";
 
 import { Card, CardDeck, ProgressBar, Container } from "react-bootstrap";
 
-import "../../App.css";
-import { getDataDonasi } from "../../Action/HomeAction";
-import { getDetailDonasi } from "../../Action/DetailAction";
 import { connect } from "react-redux";
+
 import { useHistory } from "react-router-dom";
+
+import "../../App.css";
+import { getDetailDonasi } from "../../Action/DetailAction";
+import { getDataDonasi } from "../../Action/HomeAction";
 
 function Project(props) {
   console.log("atas", props);
-  const now = 50;
-  const progressInstance = (
-    <ProgressBar now={now} label={`${now}%`} className="progress-bar-project" />
-  );
 
   useEffect(() => {
     props.getDataDonasi();
@@ -41,6 +39,7 @@ function Project(props) {
         <div className="container">
           <CardDeck className="card-deck">
             {approve.map((items) => {
+              if (items.Jumlah < items.Nominal){
               return (
                 <div className="col-lg-4" onClick={() => handleClick(items)}>
                   <Card className="card-galangdana">
@@ -75,7 +74,7 @@ function Project(props) {
                   </Card>
                   <br />
                 </div>
-              );
+              )};
             })}
           </CardDeck>
         </div>
